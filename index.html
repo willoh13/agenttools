@@ -1,0 +1,251 @@
+git clone https://github.com/willoh13/agenttools-site.git 2>/dev/null || mkdir -p /tmp/agenttools-build
+cd /tmp/agenttools-build
+rm -rf agenttools-build
+mkdir agenttools-build
+cd agenttools-build
+
+cat > index.html << 'HTML'
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgentTools — AI Agent Workflows & Toolkits</title>
+    <meta name="description" content="Premium AI agent workflow playbooks, developer toolkits, and content creation stacks. Plug-and-play configurations for Hermes, Claude Code, Codex, and Cursor.">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #0a0a0b;
+            color: #e4e4e7;
+            line-height: 1.6;
+        }
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+        
+        /* Header */
+        header {
+            padding: 24px 0;
+            border-bottom: 1px solid #1f1f23;
+        }
+        header .container {
+            display: flex; justify-content: space-between; align-items: center;
+        }
+        .logo { font-size: 1.5rem; font-weight: 700; color: #fff; }
+        .logo span { color: #a78bfa; }
+        nav a {
+            color: #a1a1aa; text-decoration: none; margin-left: 24px; font-size: 0.9rem;
+            transition: color 0.2s;
+        }
+        nav a:hover { color: #fff; }
+        nav a.cta {
+            background: #7c3aed; color: #fff; padding: 8px 20px; border-radius: 8px;
+        }
+        nav a.cta:hover { background: #6d28d9; }
+
+        /* Hero */
+        .hero {
+            padding: 100px 0 80px;
+            text-align: center;
+        }
+        .hero h1 {
+            font-size: 3rem; font-weight: 800; color: #fff;
+            margin-bottom: 16px;
+            line-height: 1.2;
+        }
+        .hero h1 span { color: #a78bfa; }
+        .hero p {
+            font-size: 1.2rem; color: #a1a1aa;
+            max-width: 600px; margin: 0 auto 32px;
+        }
+        .hero-buttons { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+        .btn {
+            padding: 14px 32px; border-radius: 10px; font-size: 1rem; font-weight: 600;
+            text-decoration: none; display: inline-block; transition: all 0.2s;
+        }
+        .btn-primary { background: #7c3aed; color: #fff; }
+        .btn-primary:hover { background: #6d28d9; transform: translateY(-1px); }
+        .btn-secondary { background: #1f1f23; color: #e4e4e7; border: 1px solid #2f2f35; }
+        .btn-secondary:hover { background: #2f2f35; }
+
+        /* Products */
+        .products {
+            padding: 80px 0;
+        }
+        .products h2 {
+            font-size: 2rem; font-weight: 700; color: #fff;
+            text-align: center; margin-bottom: 48px;
+        }
+        .product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; }
+        .product-card {
+            background: #121214; border: 1px solid #1f1f23; border-radius: 16px;
+            padding: 32px; transition: all 0.2s;
+        }
+        .product-card:hover { border-color: #2f2f35; transform: translateY(-2px); }
+        .product-card .icon { font-size: 2rem; margin-bottom: 16px; }
+        .product-card h3 { font-size: 1.3rem; color: #fff; margin-bottom: 8px; }
+        .product-card .price { font-size: 1.5rem; font-weight: 700; color: #a78bfa; margin-bottom: 12px; }
+        .product-card p { color: #a1a1aa; font-size: 0.9rem; margin-bottom: 20px; }
+        .product-card .features { list-style: none; margin-bottom: 24px; }
+        .product-card .features li {
+            color: #a1a1aa; font-size: 0.85rem; padding: 4px 0;
+            padding-left: 20px; position: relative;
+        }
+        .product-card .features li::before {
+            content: "✓"; position: absolute; left: 0; color: #7c3aed;
+        }
+        .btn-small {
+            display: inline-block; padding: 10px 24px; border-radius: 8px;
+            background: #7c3aed; color: #fff; text-decoration: none; font-weight: 600;
+            font-size: 0.9rem; transition: all 0.2s;
+        }
+        .btn-small:hover { background: #6d28d9; }
+
+        /* How it works */
+        .how {
+            padding: 80px 0;
+            background: #0d0d10;
+        }
+        .how h2 {
+            font-size: 2rem; font-weight: 700; color: #fff;
+            text-align: center; margin-bottom: 48px;
+        }
+        .steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 24px; }
+        .step { text-align: center; padding: 24px; }
+        .step .num {
+            width: 48px; height: 48px; border-radius: 50%;
+            background: #1f1f23; color: #a78bfa; font-size: 1.3rem; font-weight: 700;
+            display: flex; align-items: center; justify-content: center; margin: 0 auto 16px;
+            border: 1px solid #2f2f35;
+        }
+        .step h3 { color: #fff; margin-bottom: 8px; font-size: 1.1rem; }
+        .step p { color: #a1a1aa; font-size: 0.9rem; }
+
+        /* Footer */
+        footer {
+            padding: 40px 0;
+            text-align: center;
+            border-top: 1px solid #1f1f23;
+            color: #52525b;
+            font-size: 0.85rem;
+        }
+        footer a { color: #a1a1aa; text-decoration: none; }
+        footer a:hover { color: #fff; }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2rem; }
+            .hero { padding: 60px 0 40px; }
+            nav { display: none; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">Agent<span>Tools</span></div>
+            <nav>
+                <a href="#products">Products</a>
+                <a href="#how">How It Works</a>
+                <a href="https://wiseai.gumroad.com" class="cta">Browse Store</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>AI Agent Workflows<br>That Actually <span>Work</span></h1>
+            <p>Stop writing the same prompts every day. Plug-and-play configurations for Hermes, Claude Code, Codex, and Cursor.</p>
+            <div class="hero-buttons">
+                <a href="https://wiseai.gumroad.com" class="btn btn-primary">View Products →</a>
+                <a href="#products" class="btn btn-secondary">See What's Inside</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="products" id="products">
+        <div class="container">
+            <h2>Our Products</h2>
+            <div class="product-grid">
+                <div class="product-card">
+                    <div class="icon">📋</div>
+                    <h3>AI Agent Workflow Playbook</h3>
+                    <div class="price">$27</div>
+                    <p>25+ battle-tested agent workflows, system prompts, and automation playbooks.</p>
+                    <ul class="features">
+                        <li>Research & analysis workflows</li>
+                        <li>Content creation automation</li>
+                        <li>Software development pipelines</li>
+                        <li>Business operations templates</li>
+                        <li>Optimized for all major agents</li>
+                    </ul>
+                    <a href="https://wiseai.gumroad.com/l/workflow-playbook" class="btn-small">Buy Now</a>
+                </div>
+
+                <div class="product-card">
+                    <div class="icon">⚙️</div>
+                    <h3>Developer Agent Toolkit</h3>
+                    <div class="price">$19</div>
+                    <p>Ready-to-use agent configurations for developers. Code review, debugging, and deployment automation.</p>
+                    <ul class="features">
+                        <li>Code review bot setup</li>
+                        <li>Automated debugging pipelines</li>
+                        <li>CI/CD integration templates</li>
+                        <li>Test generation workflows</li>
+                        <li>API integration patterns</li>
+                    </ul>
+                    <a href="https://wiseai.gumroad.com/l/dev-toolkit" class="btn-small">Buy Now</a>
+                </div>
+
+                <div class="product-card">
+                    <div class="icon">🎨</div>
+                    <h3>Content Creator AI Stack</h3>
+                    <div class="price">$15</div>
+                    <p>Full content production pipeline powered by AI agents. From research to publish-ready drafts.</p>
+                    <ul class="features">
+                        <li>Blog post factory workflow</li>
+                        <li>Social media content calendar</li>
+                        <li>Newsletter automation system</li>
+                        <li>Video script generation</li>
+                        <li>Cross-platform publishing</li>
+                    </ul>
+                    <a href="https://wiseai.gumroad.com/l/content-stack" class="btn-small">Buy Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="how" id="how">
+        <div class="container">
+            <h2>How It Works</h2>
+            <div class="steps">
+                <div class="step">
+                    <div class="num">1</div>
+                    <h3>Choose Your Kit</h3>
+                    <p>Pick the toolkit that matches your workflow — dev, content, or full playbook.</p>
+                </div>
+                <div class="step">
+                    <div class="num">2</div>
+                    <h3>Download Instantly</h3>
+                    <p>Get instant access after purchase. No waiting, no shipping.</p>
+                </div>
+                <div class="step">
+                    <div class="num">3</div>
+                    <h3>Plug & Play</h3>
+                    <p>Load the configs into your agent. Works with Hermes, Claude Code, Codex, and Cursor.</p>
+                </div>
+                <div class="step">
+                    <div class="num">4</div>
+                    <h3>Save Hours Daily</h3>
+                    <p>Stop reinventing the wheel. Your AI works for you, not the other way around.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>© 2026 <a href="https://github.com/willoh13">AgentTools</a> — Built for AI agents, by AI agents.</p>
+        </div>
+    </footer>
+</body>
+</html>
+HTML
