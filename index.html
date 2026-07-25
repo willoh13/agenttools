@@ -1,190 +1,292 @@
-git clone https://github.com/willoh13/agenttools-site.git 2>/dev/null || mkdir -p /tmp/agenttools-build
-cd /tmp/agenttools-build
-rm -rf agenttools-build
-mkdir agenttools-build
-cd agenttools-build
-
-cat > index.html << 'HTML'
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AgentTools — AI Agent Workflows & Toolkits</title>
-    <meta name="description" content="Premium AI agent workflow playbooks, developer toolkits, and content creation stacks. Plug-and-play configurations for Hermes, Claude Code, Codex, and Cursor.">
+    <title>AgentTools — AI Agent Rankings & Configs 2026</title>
+    <meta name="description" content="Rankings of the best AI agents, coding tools, writing assistants, and agentic frameworks. Plus premium config packs to supercharge your workflow.">
+    <meta property="og:title" content="AgentTools — AI Agent Rankings 2026">
+    <meta property="og:description" content="Rankings of the best AI agents, coding tools, and frameworks. With premium config packs.">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "AgentTools",
+      "url": "https://willoh13.github.io/agenttools/",
+      "description": "AI agent rankings and premium config packs"
+    }
+    </script>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            background: #0a0a0b;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Inter', sans-serif;
+            background: #08080a;
             color: #e4e4e7;
             line-height: 1.6;
         }
         .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
-        
+
         /* Header */
         header {
-            padding: 24px 0;
-            border-bottom: 1px solid #1f1f23;
+            padding: 20px 0;
+            border-bottom: 1px solid #18181b;
+            position: sticky; top: 0; background: #08080a; z-index: 100;
         }
-        header .container {
-            display: flex; justify-content: space-between; align-items: center;
-        }
-        .logo { font-size: 1.5rem; font-weight: 700; color: #fff; }
+        header .container { display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1.4rem; font-weight: 700; color: #fff; text-decoration: none; }
         .logo span { color: #a78bfa; }
         nav a {
-            color: #a1a1aa; text-decoration: none; margin-left: 24px; font-size: 0.9rem;
+            color: #a1a1aa; text-decoration: none; margin-left: 20px; font-size: 0.85rem;
             transition: color 0.2s;
         }
         nav a:hover { color: #fff; }
         nav a.cta {
-            background: #7c3aed; color: #fff; padding: 8px 20px; border-radius: 8px;
+            background: #7c3aed; color: #fff; padding: 8px 18px; border-radius: 8px; font-weight: 600;
         }
         nav a.cta:hover { background: #6d28d9; }
 
         /* Hero */
         .hero {
-            padding: 100px 0 80px;
+            padding: 80px 0 60px;
             text-align: center;
         }
+        .hero-badge {
+            display: inline-block; background: #18181b; border: 1px solid #27272a;
+            padding: 6px 16px; border-radius: 100px; font-size: 0.8rem; color: #a78bfa; margin-bottom: 20px;
+        }
         .hero h1 {
-            font-size: 3rem; font-weight: 800; color: #fff;
-            margin-bottom: 16px;
-            line-height: 1.2;
+            font-size: 2.8rem; font-weight: 800; color: #fff;
+            margin-bottom: 16px; line-height: 1.15;
         }
         .hero h1 span { color: #a78bfa; }
+        .hero h1 .highlight { background: linear-gradient(135deg, #a78bfa, #7c3aed); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
         .hero p {
-            font-size: 1.2rem; color: #a1a1aa;
+            font-size: 1.1rem; color: #a1a1aa;
             max-width: 600px; margin: 0 auto 32px;
         }
-        .hero-buttons { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+        .hero-buttons { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
         .btn {
-            padding: 14px 32px; border-radius: 10px; font-size: 1rem; font-weight: 600;
+            padding: 12px 28px; border-radius: 10px; font-size: 0.95rem; font-weight: 600;
             text-decoration: none; display: inline-block; transition: all 0.2s;
         }
         .btn-primary { background: #7c3aed; color: #fff; }
         .btn-primary:hover { background: #6d28d9; transform: translateY(-1px); }
-        .btn-secondary { background: #1f1f23; color: #e4e4e7; border: 1px solid #2f2f35; }
-        .btn-secondary:hover { background: #2f2f35; }
+        .btn-secondary { background: #18181b; color: #e4e4e7; border: 1px solid #27272a; }
+        .btn-secondary:hover { background: #27272a; }
+
+        /* Section headers */
+        .section-header {
+            text-align: center; margin-bottom: 40px;
+        }
+        .section-header h2 {
+            font-size: 2rem; font-weight: 700; color: #fff; margin-bottom: 8px;
+        }
+        .section-header p {
+            color: #a1a1aa; font-size: 0.95rem; max-width: 500px; margin: 0 auto;
+        }
+
+        /* Ranking Categories Grid */
+        .rankings-section { padding: 60px 0; }
+        .ranking-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .ranking-card {
+            background: #0d0d10; border: 1px solid #18181b; border-radius: 16px;
+            padding: 28px; transition: all 0.25s; cursor: pointer; text-decoration: none; display: block;
+        }
+        .ranking-card:hover {
+            border-color: #7c3aed; transform: translateY(-3px);
+            box-shadow: 0 8px 30px rgba(124, 58, 237, 0.08);
+        }
+        .ranking-card .card-icon { font-size: 1.8rem; margin-bottom: 12px; }
+        .ranking-card h3 { font-size: 1.2rem; color: #fff; margin-bottom: 8px; }
+        .ranking-card .card-desc { color: #a1a1aa; font-size: 0.85rem; margin-bottom: 16px; line-height: 1.5; }
+        .ranking-card .card-meta {
+            display: flex; justify-content: space-between; align-items: center; font-size: 0.8rem;
+        }
+        .ranking-card .card-count { color: #52525b; }
+        .ranking-card .card-arrow { color: #7c3aed; font-weight: 700; }
+
+        /* Rankings strip preview */
+        .strip {
+            display: flex; flex-direction: column; gap: 6px; margin-top: 14px;
+        }
+        .strip-item {
+            display: flex; align-items: center; gap: 10px; padding: 6px 10px;
+            background: #121214; border-radius: 8px; font-size: 0.8rem;
+        }
+        .strip-item .rank-num {
+            font-weight: 700; color: #52525b; min-width: 22px;
+        }
+        .strip-item .rank-name { color: #d4d4d8; flex: 1; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+        .strip-item .rank-stars { color: #fbbf24; font-size: 0.75rem; }
 
         /* Products */
-        .products {
-            padding: 80px 0;
-        }
-        .products h2 {
-            font-size: 2rem; font-weight: 700; color: #fff;
-            text-align: center; margin-bottom: 48px;
-        }
-        .product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; }
+        .products-section { padding: 60px 0; background: #0a0a0c; }
+        .product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); gap: 20px; }
         .product-card {
-            background: #121214; border: 1px solid #1f1f23; border-radius: 16px;
-            padding: 32px; transition: all 0.2s;
+            background: #0d0d10; border: 1px solid #18181b; border-radius: 16px;
+            padding: 28px; transition: all 0.2s;
         }
-        .product-card:hover { border-color: #2f2f35; transform: translateY(-2px); }
-        .product-card .icon { font-size: 2rem; margin-bottom: 16px; }
-        .product-card h3 { font-size: 1.3rem; color: #fff; margin-bottom: 8px; }
-        .product-card .price { font-size: 1.5rem; font-weight: 700; color: #a78bfa; margin-bottom: 12px; }
-        .product-card p { color: #a1a1aa; font-size: 0.9rem; margin-bottom: 20px; }
-        .product-card .features { list-style: none; margin-bottom: 24px; }
+        .product-card:hover { border-color: #27272a; transform: translateY(-2px); }
+        .product-card .icon { font-size: 1.8rem; margin-bottom: 12px; }
+        .product-card h3 { font-size: 1.15rem; color: #fff; margin-bottom: 4px; }
+        .product-card .price { font-size: 1.4rem; font-weight: 700; color: #a78bfa; margin-bottom: 12px; }
+        .product-card p { color: #a1a1aa; font-size: 0.85rem; margin-bottom: 16px; line-height: 1.5; }
+        .product-card .features { list-style: none; margin-bottom: 20px; }
         .product-card .features li {
-            color: #a1a1aa; font-size: 0.85rem; padding: 4px 0;
-            padding-left: 20px; position: relative;
+            color: #a1a1aa; font-size: 0.8rem; padding: 3px 0;
+            padding-left: 18px; position: relative;
         }
         .product-card .features li::before {
             content: "✓"; position: absolute; left: 0; color: #7c3aed;
         }
         .btn-small {
-            display: inline-block; padding: 10px 24px; border-radius: 8px;
+            display: inline-block; padding: 9px 22px; border-radius: 8px;
             background: #7c3aed; color: #fff; text-decoration: none; font-weight: 600;
-            font-size: 0.9rem; transition: all 0.2s;
+            font-size: 0.85rem; transition: all 0.2s;
         }
         .btn-small:hover { background: #6d28d9; }
-
-        /* How it works */
-        .how {
-            padding: 80px 0;
-            background: #0d0d10;
-        }
-        .how h2 {
-            font-size: 2rem; font-weight: 700; color: #fff;
-            text-align: center; margin-bottom: 48px;
-        }
-        .steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 24px; }
-        .step { text-align: center; padding: 24px; }
-        .step .num {
-            width: 48px; height: 48px; border-radius: 50%;
-            background: #1f1f23; color: #a78bfa; font-size: 1.3rem; font-weight: 700;
-            display: flex; align-items: center; justify-content: center; margin: 0 auto 16px;
-            border: 1px solid #2f2f35;
-        }
-        .step h3 { color: #fff; margin-bottom: 8px; font-size: 1.1rem; }
-        .step p { color: #a1a1aa; font-size: 0.9rem; }
 
         /* Footer */
         footer {
             padding: 40px 0;
             text-align: center;
-            border-top: 1px solid #1f1f23;
+            border-top: 1px solid #18181b;
             color: #52525b;
             font-size: 0.85rem;
         }
-        footer a { color: #a1a1aa; text-decoration: none; }
-        footer a:hover { color: #fff; }
+        footer .footer-links { margin-bottom: 12px; }
+        footer .footer-links a {
+            color: #a1a1aa; text-decoration: none; margin: 0 12px; font-size: 0.85rem;
+        }
+        footer .footer-links a:hover { color: #fff; }
+        footer p { font-size: 0.8rem; }
 
         @media (max-width: 768px) {
-            .hero h1 { font-size: 2rem; }
-            .hero { padding: 60px 0 40px; }
+            .hero h1 { font-size: 1.8rem; }
+            .hero { padding: 50px 0 40px; }
+            .section-header h2 { font-size: 1.5rem; }
+            nav a { margin-left: 12px; font-size: 0.8rem; }
             nav { display: none; }
+            .ranking-grid { grid-template-columns: 1fr; }
+            .product-grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
 <body>
     <header>
         <div class="container">
-            <div class="logo">Agent<span>Tools</span></div>
+            <a href="/" class="logo">Agent<span>Tools</span></a>
             <nav>
-                <a href="#products">Products</a>
-                <a href="#how">How It Works</a>
-                <a href="https://wiseai.gumroad.com" class="cta">Browse Store</a>
+                <a href="/">Rankings</a>
+                <a href="products.html">Products</a>
+                <a href="/rankings/best-ai-coding-agents.html">Coding</a>
+                <a href="/rankings/best-ai-writing-tools.html">Writing</a>
+                <a href="https://wiseai.gumroad.com" class="cta">Store →</a>
             </nav>
         </div>
     </header>
 
     <section class="hero">
         <div class="container">
-            <h1>AI Agent Workflows<br>That Actually <span>Work</span></h1>
-            <p>Stop writing the same prompts every day. Plug-and-play configurations for Hermes, Claude Code, Codex, and Cursor.</p>
+            <div class="hero-badge">★ Updated 2026</div>
+            <h1>AI Agent <span class="highlight">Rankings</span> &amp; Premium Configs</h1>
+            <p>We rank the best AI coding agents, writing assistants, and agentic frameworks — and sell plug-and-play config packs so you don't have to build from scratch.</p>
             <div class="hero-buttons">
-                <a href="https://wiseai.gumroad.com" class="btn btn-primary">View Products →</a>
-                <a href="#products" class="btn btn-secondary">See What's Inside</a>
+                <a href="#rankings" class="btn btn-primary">Browse Rankings →</a>
+                <a href="products.html" class="btn btn-secondary">View Products</a>
             </div>
         </div>
     </section>
 
-    <section class="products" id="products">
+    <section class="rankings-section" id="rankings">
         <div class="container">
-            <h2>Our Products</h2>
+            <div class="section-header">
+                <h2>Agent Rankings</h2>
+                <p>Unbiased rankings based on real-world performance, community adoption, and feature sets.</p>
+            </div>
+            <div class="ranking-grid">
+
+                <a href="rankings/best-ai-coding-agents.html" class="ranking-card">
+                    <div class="card-icon">💻</div>
+                    <h3>Best AI Coding Agents</h3>
+                    <p class="card-desc">Claude Code vs Cursor vs Codex vs Continue — ranked for code generation, debugging, and refactoring.</p>
+                    <div class="strip">
+                        <div class="strip-item"><span class="rank-num">#1</span><span class="rank-name">Claude Code</span><span class="rank-stars">★★★★★</span></div>
+                        <div class="strip-item"><span class="rank-num">#2</span><span class="rank-name">Cursor</span><span class="rank-stars">★★★★★</span></div>
+                        <div class="strip-item"><span class="rank-num">#3</span><span class="rank-name">Codex CLI</span><span class="rank-stars">★★★★☆</span></div>
+                    </div>
+                </a>
+
+                <a href="rankings/best-ai-writing-tools.html" class="ranking-card">
+                    <div class="card-icon">✍️</div>
+                    <h3>Best AI Writing Tools</h3>
+                    <p class="card-desc">Claude, ChatGPT, Gemini, and specialized writing agents — ranked for content quality and workflow.</p>
+                    <div class="strip">
+                        <div class="strip-item"><span class="rank-num">#1</span><span class="rank-name">Claude</span><span class="rank-stars">★★★★★</span></div>
+                        <div class="strip-item"><span class="rank-num">#2</span><span class="rank-name">ChatGPT</span><span class="rank-stars">★★★★☆</span></div>
+                        <div class="strip-item"><span class="rank-num">#3</span><span class="rank-name">Gemini</span><span class="rank-stars">★★★★☆</span></div>
+                    </div>
+                </a>
+
+                <a href="rankings/best-agentic-frameworks.html" class="ranking-card">
+                    <div class="card-icon">🧩</div>
+                    <h3>Best Agentic Frameworks</h3>
+                    <p class="card-desc">LangChain vs CrewAI vs AutoGen vs Hermes — ranked for automation, reliability, and ease of use.</p>
+                    <div class="strip">
+                        <div class="strip-item"><span class="rank-num">#1</span><span class="rank-name">Hermes Agent</span><span class="rank-stars">★★★★★</span></div>
+                        <div class="strip-item"><span class="rank-num">#2</span><span class="rank-name">CrewAI</span><span class="rank-stars">★★★★☆</span></div>
+                        <div class="strip-item"><span class="rank-num">#3</span><span class="rank-name">LangChain</span><span class="rank-stars">★★★★☆</span></div>
+                    </div>
+                </a>
+
+                <a href="rankings/best-open-source-models.html" class="ranking-card">
+                    <div class="card-icon">🧠</div>
+                    <h3>Best Open-Source Models</h3>
+                    <p class="card-desc">DeepSeek, Llama, Qwen, Gemma, Mistral — ranked for coding, reasoning, and cost-effectiveness.</p>
+                    <div class="strip">
+                        <div class="strip-item"><span class="rank-num">#1</span><span class="rank-name">DeepSeek V4</span><span class="rank-stars">★★★★★</span></div>
+                        <div class="strip-item"><span class="rank-num">#2</span><span class="rank-name">Llama 4</span><span class="rank-stars">★★★★★</span></div>
+                        <div class="strip-item"><span class="rank-num">#3</span><span class="rank-name">Qwen 3.5</span><span class="rank-stars">★★★★☆</span></div>
+                    </div>
+                </a>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="products-section" id="products">
+        <div class="container">
+            <div class="section-header">
+                <h2>Premium Config Packs</h2>
+                <p>Ready-to-use AI agent workflows and toolkits. Download, unzip, and load into your agent.</p>
+            </div>
             <div class="product-grid">
                 <div class="product-card">
                     <div class="icon">📋</div>
                     <h3>AI Agent Workflow Playbook</h3>
                     <div class="price">$27</div>
-                    <p>25+ battle-tested agent workflows, system prompts, and automation playbooks.</p>
+                    <p>25+ battle-tested agent workflows, system prompts, and automation plans. Works with any agent.</p>
                     <ul class="features">
                         <li>Research & analysis workflows</li>
                         <li>Content creation automation</li>
                         <li>Software development pipelines</li>
                         <li>Business operations templates</li>
-                        <li>Optimized for all major agents</li>
+                        <li>Model-agnostic .md files</li>
                     </ul>
-                    <a href="https://wiseai.gumroad.com/l/workflow-playbook" class="btn-small">Buy Now</a>
+                    <a href="https://wiseai.gumroad.com/l/workflow-playbook" class="btn-small">Buy Now →</a>
                 </div>
 
                 <div class="product-card">
                     <div class="icon">⚙️</div>
                     <h3>Developer Agent Toolkit</h3>
                     <div class="price">$19</div>
-                    <p>Ready-to-use agent configurations for developers. Code review, debugging, and deployment automation.</p>
+                    <p>Ready-to-use agent configs for developers. Code review, debugging, and deployment automation.</p>
                     <ul class="features">
                         <li>Code review bot setup</li>
                         <li>Automated debugging pipelines</li>
@@ -192,14 +294,14 @@ cat > index.html << 'HTML'
                         <li>Test generation workflows</li>
                         <li>API integration patterns</li>
                     </ul>
-                    <a href="https://wiseai.gumroad.com/l/dev-toolkit" class="btn-small">Buy Now</a>
+                    <a href="https://wiseai.gumroad.com/l/dev-toolkit" class="btn-small">Buy Now →</a>
                 </div>
 
                 <div class="product-card">
                     <div class="icon">🎨</div>
                     <h3>Content Creator AI Stack</h3>
                     <div class="price">$15</div>
-                    <p>Full content production pipeline powered by AI agents. From research to publish-ready drafts.</p>
+                    <p>Full content production pipeline. From research to publish-ready drafts in minutes.</p>
                     <ul class="features">
                         <li>Blog post factory workflow</li>
                         <li>Social media content calendar</li>
@@ -207,35 +309,7 @@ cat > index.html << 'HTML'
                         <li>Video script generation</li>
                         <li>Cross-platform publishing</li>
                     </ul>
-                    <a href="https://wiseai.gumroad.com/l/content-stack" class="btn-small">Buy Now</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="how" id="how">
-        <div class="container">
-            <h2>How It Works</h2>
-            <div class="steps">
-                <div class="step">
-                    <div class="num">1</div>
-                    <h3>Choose Your Kit</h3>
-                    <p>Pick the toolkit that matches your workflow — dev, content, or full playbook.</p>
-                </div>
-                <div class="step">
-                    <div class="num">2</div>
-                    <h3>Download Instantly</h3>
-                    <p>Get instant access after purchase. No waiting, no shipping.</p>
-                </div>
-                <div class="step">
-                    <div class="num">3</div>
-                    <h3>Plug & Play</h3>
-                    <p>Load the configs into your agent. Works with Hermes, Claude Code, Codex, and Cursor.</p>
-                </div>
-                <div class="step">
-                    <div class="num">4</div>
-                    <h3>Save Hours Daily</h3>
-                    <p>Stop reinventing the wheel. Your AI works for you, not the other way around.</p>
+                    <a href="https://wiseai.gumroad.com/l/content-stack" class="btn-small">Buy Now →</a>
                 </div>
             </div>
         </div>
@@ -243,9 +317,14 @@ cat > index.html << 'HTML'
 
     <footer>
         <div class="container">
+            <div class="footer-links">
+                <a href="/">Home</a>
+                <a href="products.html">Products</a>
+                <a href="https://wiseai.gumroad.com">Store</a>
+                <a href="https://github.com/willoh13/agenttools">GitHub</a>
+            </div>
             <p>© 2026 <a href="https://github.com/willoh13">AgentTools</a> — Built for AI agents, by AI agents.</p>
         </div>
     </footer>
 </body>
 </html>
-HTML

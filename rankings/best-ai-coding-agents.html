@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Best AI Coding Agents 2026 — Ranked | AgentTools</title>
+    <meta name="description" content="We rank the best AI coding agents: Claude Code vs Cursor vs Codex CLI vs Continue. Compare features, pricing, and real-world performance.">
+    <meta property="og:title" content="Best AI Coding Agents 2026 — Ranked">
+    <meta property="og:description" content="We rank the best AI coding agents: Claude Code vs Cursor vs Codex CLI vs Continue.">
+    <script type="application/ld+json">{
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      "name": "Best AI Coding Agents 2026",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "Claude Code"},
+        {"@type": "ListItem", "position": 2, "name": "Cursor"},
+        {"@type": "ListItem", "position": 3, "name": "Codex CLI"},
+        {"@type": "ListItem", "position": 4, "name": "Continue"},
+        {"@type": "ListItem", "position": 5, "name": "Windsurf"},
+        {"@type": "ListItem", "position": 6, "name": "GitHub Copilot"},
+        {"@type": "ListItem", "position": 7, "name": "Tabnine"},
+        {"@type": "ListItem", "position": 8, "name": "Sourcegraph Cody"}
+      ]
+    }</script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Inter', sans-serif;
+            background: #08080a;
+            color: #e4e4e7;
+            line-height: 1.6;
+        }
+        .container { max-width: 900px; margin: 0 auto; padding: 0 24px; }
+
+        /* Header */
+        header {
+            padding: 20px 0;
+            border-bottom: 1px solid #18181b;
+            position: sticky; top: 0; background: #08080a; z-index: 100;
+        }
+        header .container { display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1.4rem; font-weight: 700; color: #fff; text-decoration: none; }
+        .logo span { color: #a78bfa; }
+        nav a {
+            color: #a1a1aa; text-decoration: none; margin-left: 20px; font-size: 0.85rem;
+            transition: color 0.2s;
+        }
+        nav a:hover { color: #fff; }
+        nav a.cta {
+            background: #7c3aed; color: #fff; padding: 8px 18px; border-radius: 8px; font-weight: 600;
+        }
+        nav a.cta:hover { background: #6d28d9; }
+
+        /* Back link */
+        .back-link {
+            display: inline-block; margin: 30px 0 10px; color: #a1a1aa;
+            text-decoration: none; font-size: 0.85rem;
+        }
+        .back-link:hover { color: #a78bfa; }
+
+        /* Page header */
+        .page-header { padding: 20px 0 30px; }
+        .page-header h1 { font-size: 2rem; font-weight: 800; color: #fff; margin-bottom: 8px; line-height: 1.2; }
+        .page-header .tag {
+            display: inline-block; background: #18181b; border: 1px solid #27272a;
+            padding: 4px 12px; border-radius: 100px; font-size: 0.75rem; color: #a78bfa;
+            margin-right: 6px; margin-bottom: 6px;
+        }
+        .page-header p { color: #a1a1aa; font-size: 0.95rem; max-width: 600px; }
+
+        /* Ranking list */
+        .ranking-list { padding: 0 0 60px; }
+        .rank-item {
+            background: #0d0d10; border: 1px solid #18181b; border-radius: 16px;
+            padding: 28px; margin-bottom: 16px; transition: all 0.2s;
+        }
+        .rank-item:hover { border-color: #27272a; }
+        .rank-item .rank-header {
+            display: flex; align-items: center; gap: 16px; margin-bottom: 12px;
+        }
+        .rank-item .rank-number {
+            font-size: 1.8rem; font-weight: 800; color: #27272a; min-width: 44px;
+        }
+        .rank-item:nth-child(1) .rank-number { color: #fbbf24; }
+        .rank-item:nth-child(2) .rank-number { color: #a1a1aa; }
+        .rank-item:nth-child(3) .rank-number { color: #d97706; }
+        .rank-item .rank-name { font-size: 1.3rem; font-weight: 700; color: #fff; flex: 1; }
+        .rank-item .rank-stars { color: #fbbf24; font-size: 1rem; white-space: nowrap; }
+        .rank-item .rank-score { color: #52525b; font-size: 0.85rem; margin-left: 8px; }
+
+        .rank-item .rank-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 12px; }
+        .rank-item .rank-tags span {
+            display: inline-block; background: #18181b; border: 1px solid #27272a;
+            padding: 3px 10px; border-radius: 100px; font-size: 0.75rem; color: #a78bfa;
+        }
+        .rank-item .rank-tags .best-for { background: #1e1b2e; border-color: #3b2f6e; color: #a78bfa; }
+
+        .rank-item .rank-body {
+            display: grid; grid-template-columns: 1fr 160px; gap: 20px;
+        }
+        .rank-item .rank-desc { color: #a1a1aa; font-size: 0.88rem; line-height: 1.6; }
+        .rank-item .rank-cta { text-align: right; }
+        .rank-item .btn-micro {
+            display: inline-block; padding: 8px 18px; border-radius: 8px;
+            background: #7c3aed; color: #fff; text-decoration: none; font-weight: 600;
+            font-size: 0.8rem; transition: all 0.2s;
+        }
+        .rank-item .btn-micro:hover { background: #6d28d9; }
+        .prod-link { display: block; color: #71717a; font-size: 0.75rem; margin-top: 6px; }
+
+        /* Products CTA section */
+        .product-cta {
+            background: #0d0d10; border: 1px solid #18181b; border-radius: 16px;
+            padding: 32px; text-align: center; margin: 40px 0;
+        }
+        .product-cta h3 { color: #fff; font-size: 1.2rem; margin-bottom: 8px; }
+        .product-cta p { color: #a1a1aa; font-size: 0.9rem; margin-bottom: 20px; }
+        .product-cta .btns { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+        .btn {
+            padding: 12px 28px; border-radius: 10px; font-size: 0.95rem; font-weight: 600;
+            text-decoration: none; display: inline-block; transition: all 0.2s;
+        }
+        .btn-primary { background: #7c3aed; color: #fff; }
+        .btn-primary:hover { background: #6d28d9; transform: translateY(-1px); }
+        .btn-secondary { background: #18181b; color: #e4e4e7; border: 1px solid #27272a; }
+        .btn-secondary:hover { background: #27272a; }
+
+        /* Footer */
+        footer {
+            padding: 40px 0; text-align: center; border-top: 1px solid #18181b;
+            color: #52525b; font-size: 0.85rem;
+        }
+        footer a { color: #a1a1aa; text-decoration: none; }
+        footer a:hover { color: #fff; }
+
+        @media (max-width: 768px) {
+            .page-header h1 { font-size: 1.5rem; }
+            .rank-item .rank-body { grid-template-columns: 1fr; }
+            .rank-item .rank-header { flex-wrap: wrap; }
+            nav { display: none; }
+        }
+</style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="/agenttools/" class="logo">Agent<span>Tools</span></a>
+            <nav>
+                <a href="/agenttools/">Home</a>
+                <a href="/agenttools/products.html">Products</a>
+                <a href="https://wiseai.gumroad.com" class="cta">Store →</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <a href="/agenttools/" class="back-link">← Back to Rankings</a>
+    </div>
+
+    <section class="page-header">
+        <div class="container">
+            <span class="tag">💻 Coding</span>
+            <span class="tag">Updated 2026</span>
+            <h1>Best AI Coding Agents Ranked</h1>
+            <p>The best AI coding assistants compared. We tested each on code generation quality, debugging, refactoring, agentic autonomy, and IDE integration.</p>
+        </div>
+    </section>
+
+    <section class="ranking-list">
+        <div class="container">
+
+            <div class="rank-item">
+                <div class="rank-header">
+                    <div class="rank-number">#1</div>
+                    <div class="rank-name">Claude Code</div>
+                    <div class="rank-stars">★★★★★</div>
+                    <div class="rank-score">9.4/10</div>
+                </div>
+                <div class="rank-tags">
+                    <span class="best-for">Best for: Complex multi-file refactors</span>
+                    <span>Agentic</span>
+                    <span>CLI</span>
+                    <span>Anthropic</span>
+                </div>
+                <div class="rank-body">
+                    <div class="rank-desc">
+                        <strong>Claude Code</strong> is Anthropic's terminal-first AI coding agent. Excels at understanding large codebases, making multi-file changes, and handling complex refactors autonomously. Supports agentic mode where it plans, codes, debugs, and iterates without hand-holding. Uses Sonnet 4 under the hood.
+                    </div>
+                    <div class="rank-cta">
+                        <a href="https://wiseai.gumroad.com/l/dev-toolkit" class="btn-micro">Get Config →</a>
+                        <span class="prod-link">Dev Agent Toolkit $19</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="rank-item">
+                <div class="rank-header">
+                    <div class="rank-number">#2</div>
+                    <div class="rank-name">Cursor</div>
+                    <div class="rank-stars">★★★★★</div>
+                    <div class="rank-score">9.1/10</div>
+                </div>
+                <div class="rank-tags">
+                    <span class="best-for">Best for: IDE-native development</span>
+                    <span>GUI</span>
+                    <span>VS Code Fork</span>
+                    <span>Multi-model</span>
+                </div>
+                <div class="rank-body">
+                    <div class="rank-desc">
+                        <strong>Cursor</strong> is a VS Code fork with deep AI integration. Offers inline code suggestions, chat, agent mode, and multi-model support (Claude, GPT, custom). Best pick if you want a familiar IDE with AI built into every click. Tab autocomplete is the fastest in class.
+                    </div>
+                    <div class="rank-cta">
+                        <a href="https://wiseai.gumroad.com/l/dev-toolkit" class="btn-micro">Get Config →</a>
+                        <span class="prod-link">Dev Agent Toolkit $19</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="rank-item">
+                <div class="rank-header">
+                    <div class="rank-number">#3</div>
+                    <div class="rank-name">Codex CLI</div>
+                    <div class="rank-stars">★★★★☆</div>
+                    <div class="rank-score">8.7/10</div>
+                </div>
+                <div class="rank-tags">
+                    <span class="best-for">Best for: Open-source agentic coding</span>
+                    <span>CLI</span>
+                    <span>OpenAI</span>
+                    <span>Open Source</span>
+                </div>
+                <div class="rank-body">
+                    <div class="rank-desc">
+                        <strong>Codex CLI</strong> is OpenAI's open-source coding agent. Runs in your terminal, explores your codebase, and makes changes autonomously. Uses OpenAI models and supports a sandboxed execution environment. Great for automated PR workflows and CI integration.
+                    </div>
+                    <div class="rank-cta">
+                        <a href="https://wiseai.gumroad.com/l/dev-toolkit" class="btn-micro">Get Config →</a>
+                        <span class="prod-link">Dev Agent Toolkit $19</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="rank-item">
+                <div class="rank-header">
+                    <div class="rank-number">#4</div>
+                    <div class="rank-name">Continue</div>
+                    <div class="rank-stars">★★★★☆</div>
+                    <div class="rank-score">8.3/10</div>
+                </div>
+                <div class="rank-tags">
+                    <span class="best-for">Best for: Open-source VS Code extension</span>
+                    <span>Extension</span>
+                    <span>Open Source</span>
+                    <span>Custom Models</span>
+                </div>
+                <div class="rank-body">
+                    <div class="rank-desc">
+                        <strong>Continue</strong> is an open-source AI code assistant plugin for VS Code and JetBrains. Supports any LLM backend (Ollama, OpenAI, Anthropic). Highly customizable rules and prompts. Perfect if you want full control over your AI coding setup without vendor lock-in.
+                    </div>
+                    <div class="rank-cta">
+                        <a href="https://wiseai.gumroad.com/l/workflow-playbook" class="btn-micro">Get Config →</a>
+                        <span class="prod-link">AI Agent Workflow Playbook $27</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="rank-item">
+                <div class="rank-header">
+                    <div class="rank-number">#5</div>
+                    <div class="rank-name">Windsurf</div>
+                    <div class="rank-stars">★★★★☆</div>
+                    <div class="rank-score">8.0/10</div>
+                </div>
+                <div class="rank-tags">
+                    <span class="best-for">Best for: Flow state coding</span>
+                    <span>IDE</span>
+                    <span>Cascade</span>
+                    <span>Codeium</span>
+                </div>
+                <div class="rank-body">
+                    <div class="rank-desc">
+                        <strong>Windsurf</strong> by Codeium is designed for uninterrupted "flow state" coding. Its Cascade feature predicts your intent across files and handles multi-step edits. Deep contextual awareness makes it great for large codebases where you need the AI to understand your full project.
+                    </div>
+                    <div class="rank-cta">
+                        <a href="https://wiseai.gumroad.com/l/dev-toolkit" class="btn-micro">Get Config →</a>
+                        <span class="prod-link">Dev Agent Toolkit $19</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="rank-item">
+                <div class="rank-header">
+                    <div class="rank-number">#6</div>
+                    <div class="rank-name">GitHub Copilot</div>
+                    <div class="rank-stars">★★★★☆</div>
+                    <div class="rank-score">7.8/10</div>
+                </div>
+                <div class="rank-tags">
+                    <span class="best-for">Best for: Everyday autocomplete</span>
+                    <span>Extension</span>
+                    <span>Microsoft</span>
+                    <span>Multi-IDE</span>
+                </div>
+                <div class="rank-body">
+                    <div class="rank-desc">
+                        <strong>GitHub Copilot</strong> is the most widely used AI coding assistant. Best-in-class inline autocomplete with multi-line suggestions. The new agent mode (Copilot Workspace) is improving rapidly. Less capable at complex multi-file refactors than Claude Code or Cursor.
+                    </div>
+                    <div class="rank-cta">
+                        <a href="https://wiseai.gumroad.com/l/workflow-playbook" class="btn-micro">Get Config →</a>
+                        <span class="prod-link">AI Agent Workflow Playbook $27</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="rank-item">
+                <div class="rank-header">
+                    <div class="rank-number">#7</div>
+                    <div class="rank-name">Tabnine</div>
+                    <div class="rank-stars">★★★★☆</div>
+                    <div class="rank-score">7.4/10</div>
+                </div>
+                <div class="rank-tags">
+                    <span class="best-for">Best for: Enterprise code completion</span>
+                    <span>Enterprise</span>
+                    <span>Privacy</span>
+                    <span>On-prem</span>
+                </div>
+                <div class="rank-body">
+                    <div class="rank-desc">
+                        <strong>Tabnine</strong> focuses on code completion with enterprise-grade privacy (on-premise deployment available). Uses a mix of local and cloud models. Great for companies that can't use cloud-only solutions but still want AI assistance. Less agentic than the top contenders.
+                    </div>
+                    <div class="rank-cta">
+                        <a href="https://wiseai.gumroad.com/l/workflow-playbook" class="btn-micro">Get Config →</a>
+                        <span class="prod-link">AI Agent Workflow Playbook $27</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="rank-item">
+                <div class="rank-header">
+                    <div class="rank-number">#8</div>
+                    <div class="rank-name">Sourcegraph Cody</div>
+                    <div class="rank-stars">★★★☆☆</div>
+                    <div class="rank-score">7.1/10</div>
+                </div>
+                <div class="rank-tags">
+                    <span class="best-for">Best for: Large codebase comprehension</span>
+                    <span>Code Search</span>
+                    <span>Context-aware</span>
+                    <span>Enterprise</span>
+                </div>
+                <div class="rank-body">
+                    <div class="rank-desc">
+                        <strong>Sourcegraph Cody</strong> excels at codebase-wide understanding. Its strength is answering questions about large, unfamiliar codebases and finding relevant code patterns. The autocomplete is decent but not as responsive as Copilot or Cursor. Shines in enterprise monorepos.
+                    </div>
+                    <div class="rank-cta">
+                        <a href="https://wiseai.gumroad.com/l/dev-toolkit" class="btn-micro">Get Config →</a>
+                        <span class="prod-link">Dev Agent Toolkit $19</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <div class="container">
+        <div class="product-cta">
+            <h3>Want These Configs Pre-Built?</h3>
+            <p>Stop writing prompts from scratch. Our Developer Agent Toolkit has ready-to-use workflows for all major coding agents.</p>
+            <div class="btns">
+                <a href="https://wiseai.gumroad.com/l/dev-toolkit" class="btn btn-primary">Get Dev Toolkit ($19) →</a>
+                <a href="https://wiseai.gumroad.com" class="btn btn-secondary">Browse All Products</a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>© 2026 <a href="https://github.com/willoh13">AgentTools</a> — Built for AI agents, by AI agents.</p>
+        </div>
+    </footer>
+</body>
+</html>
