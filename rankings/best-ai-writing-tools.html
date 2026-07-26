@@ -80,9 +80,7 @@
             padding: 3px 10px; border-radius: 100px; font-size: 0.75rem; color: #a78bfa;
         }
         .rank-item .rank-tags .best-for { background: #1e1b2e; border-color: #3b2f6e; color: #a78bfa; }
-        .rank-item .rank-body {
-            display: grid; grid-template-columns: 1fr 160px; gap: 20px;
-        }
+        
         .rank-item .rank-desc { color: #a1a1aa; font-size: 0.88rem; line-height: 1.6; }
         .rank-item .rank-cta { text-align: right; }
         .rank-item .btn-micro {
@@ -113,6 +111,27 @@
         }
         footer a { color: #a1a1aa; text-decoration: none; }
         footer a:hover { color: #fff; }
+        
+        /* Action buttons row */
+        .rank-item .rank-body {
+            display: grid; grid-template-columns: 1fr 200px; gap: 16px;
+        }
+        .rank-cta {
+            display: flex; flex-direction: column; gap: 8px; align-items: stretch;
+        }
+        .rank-cta a { text-align: center; }
+        .btn-visit {
+            display: block; padding: 8px 16px; border-radius: 8px;
+            background: transparent; color: #a1a1aa; text-decoration: none; font-weight: 500;
+            font-size: 0.8rem; border: 1px solid #27272a; transition: all 0.2s;
+        }
+        .btn-visit:hover { border-color: #a78bfa; color: #fff; }
+        .btn-affiliate {
+            border-color: #3b2f6e; color: #a78bfa;
+        }
+        .btn-affiliate:hover { border-color: #7c3aed; background: #1e1b2e; }
+        .prod-link { display: block; color: #71717a; font-size: 0.75rem; text-align: center; }
+
         @media (max-width: 768px) {
             .page-header h1 { font-size: 1.5rem; }
             .rank-item .rank-body { grid-template-columns: 1fr; }
@@ -146,148 +165,41 @@
     <section class="ranking-list">
         <div class="container">
 
-            <div class="rank-item">
-                <div class="rank-header">
-                    <div class="rank-number">#1</div>
-                    <div class="rank-name">Claude</div>
-                    <div class="rank-stars">★★★★★</div>
-                    <div class="rank-score">9.5/10</div>
-                </div>
-                <div class="rank-tags">
-                    <span class="best-for">Best for: Long-form content & nuanced writing</span>
-                    <span>Anthropic</span>
-                    <span>100K Context</span>
-                </div>
-                <div class="rank-body">
-                    <div class="rank-desc">
-                        <strong>Claude</strong> (Anthropic) produces the most natural, nuanced long-form writing. Excels at maintaining voice consistency across 10K+ word documents. Best for blog posts, articles, newsletters, and any content requiring depth. The 100K context window means it can reference your entire style guide and brand voice in one prompt.
-                    </div>
-                    <div class="rank-cta">
+                                <div class="rank-cta">
+                        <a href="https://claude.ai" class="btn-visit" target="_blank" rel="noopener">Visit Site →</a>
                         <a href="https://wiseai.gumroad.com/l/ddwnyg" class="btn-micro">Get Config →</a>
-                        <span class="prod-link">Content Creator Stack $15</span>
+                        <span class="prod-link">Content Creator AI Stack $15</span>
                     </div>
-                </div>
-            </div>
 
-            <div class="rank-item">
-                <div class="rank-header">
-                    <div class="rank-number">#2</div>
-                    <div class="rank-name">ChatGPT</div>
-                    <div class="rank-stars">★★★★☆</div>
-                    <div class="rank-score">8.8/10</div>
-                </div>
-                <div class="rank-tags">
-                    <span class="best-for">Best for: Versatility & quick drafts</span>
-                    <span>OpenAI</span>
-                    <span>GPT-5</span>
-                    <span>Canvas</span>
-                </div>
-                <div class="rank-body">
-                    <div class="rank-desc">
-                        <strong>ChatGPT</strong> remains the most versatile writing assistant. GPT-5 brings significant improvements in creativity and coherence. Canvas mode makes editing and revising inline much easier. Great for quick drafts, copywriting, brainstorming, and social media content. Strong multimodal support.
-                    </div>
-                    <div class="rank-cta">
+                                <div class="rank-cta">
+                        <a href="https://chatgpt.com" class="btn-visit" target="_blank" rel="noopener">Visit Site →</a>
                         <a href="https://wiseai.gumroad.com/l/ddwnyg" class="btn-micro">Get Config →</a>
-                        <span class="prod-link">Content Creator Stack $15</span>
+                        <span class="prod-link">Content Creator AI Stack $15</span>
                     </div>
-                </div>
-            </div>
 
-            <div class="rank-item">
-                <div class="rank-header">
-                    <div class="rank-number">#3</div>
-                    <div class="rank-name">Gemini</div>
-                    <div class="rank-stars">★★★★☆</div>
-                    <div class="rank-score">8.5/10</div>
-                </div>
-                <div class="rank-tags">
-                    <span class="best-for">Best for: Research-backed writing</span>
-                    <span>Google</span>
-                    <span>2M Context</span>
-                    <span>Search Integration</span>
-                </div>
-                <div class="rank-body">
-                    <div class="rank-desc">
-                        <strong>Gemini</strong> (Google DeepMind) offers a massive 2M token context window — enough to feed it entire books or research corpora. Excels at research-backed writing where it needs to reference many sources. Google Search integration means it can pull real-time facts. 2M context is unmatched for research-heavy content.
-                    </div>
-                    <div class="rank-cta">
+                                <div class="rank-cta">
+                        <a href="https://gemini.google.com" class="btn-visit" target="_blank" rel="noopener">Visit Site →</a>
                         <a href="https://wiseai.gumroad.com/l/ddwnyg" class="btn-micro">Get Config →</a>
-                        <span class="prod-link">Content Creator Stack $15</span>
+                        <span class="prod-link">Content Creator AI Stack $15</span>
                     </div>
-                </div>
-            </div>
 
-            <div class="rank-item">
-                <div class="rank-header">
-                    <div class="rank-number">#4</div>
-                    <div class="rank-name">Jasper</div>
-                    <div class="rank-stars">★★★★☆</div>
-                    <div class="rank-score">8.0/10</div>
-                </div>
-                <div class="rank-tags">
-                    <span class="best-for">Best for: Marketing copy & brand voice</span>
-                    <span>Specialized</span>
-                    <span>Marketing</span>
-                    <span>Templates</span>
-                </div>
-                <div class="rank-body">
-                    <div class="rank-desc">
-                        <strong>Jasper</strong> is purpose-built for marketing content. Brand voice profiles, campaign templates, and SEO optimization built-in. Better than general-purpose chatbots for branded content where consistency across multiple pieces matters. The workflow system lets you set up content pipelines.
-                    </div>
-                    <div class="rank-cta">
+                                <div class="rank-cta">
+                        <a href="https://www.jasper.ai" class="btn-visit btn-affiliate" target="_blank" rel="noopener">Visit Site ★</a>
                         <a href="https://wiseai.gumroad.com/l/ddwnyg" class="btn-micro">Get Config →</a>
-                        <span class="prod-link">Content Creator Stack $15</span>
+                        <span class="prod-link">Content Creator AI Stack $15</span>
                     </div>
-                </div>
-            </div>
 
-            <div class="rank-item">
-                <div class="rank-header">
-                    <div class="rank-number">#5</div>
-                    <div class="rank-name">Copy.ai</div>
-                    <div class="rank-stars">★★★☆☆</div>
-                    <div class="rank-score">7.6/10</div>
-                </div>
-                <div class="rank-tags">
-                    <span class="best-for">Best for: Social media & short-form copy</span>
-                    <span>Workflows</span>
-                    <span>Social</span>
-                    <span>Automation</span>
-                </div>
-                <div class="rank-body">
-                    <div class="rank-desc">
-                        <strong>Copy.ai</strong> excels at short-form copy: social media posts, ad copy, email subject lines, and product descriptions. Their workflow automation lets you chain together content generation steps. Less capable for long-form articles but fast and reliable for daily content production.
-                    </div>
-                    <div class="rank-cta">
+                                <div class="rank-cta">
+                        <a href="https://www.copy.ai" class="btn-visit btn-affiliate" target="_blank" rel="noopener">Visit Site ★</a>
                         <a href="https://wiseai.gumroad.com/l/ddwnyg" class="btn-micro">Get Config →</a>
-                        <span class="prod-link">Content Creator Stack $15</span>
+                        <span class="prod-link">Content Creator AI Stack $15</span>
                     </div>
-                </div>
-            </div>
 
-            <div class="rank-item">
-                <div class="rank-header">
-                    <div class="rank-number">#6</div>
-                    <div class="rank-name">Writer</div>
-                    <div class="rank-stars">★★★☆☆</div>
-                    <div class="rank-score">7.3/10</div>
-                </div>
-                <div class="rank-tags">
-                    <span class="best-for">Best for: Enterprise content governance</span>
-                    <span>Enterprise</span>
-                    <span>Palmyra</span>
-                    <span>API-first</span>
-                </div>
-                <div class="rank-body">
-                    <div class="rank-desc">
-                        <strong>Writer</strong> focuses on enterprise content with strong governance features: brand guidelines enforcement, compliance checks, and custom model fine-tuning on your content. Their Palmyra models are competitive. Best pick if you need AI writing with guardrails and approval workflows.
-                    </div>
-                    <div class="rank-cta">
+                                <div class="rank-cta">
+                        <a href="https://writer.com" class="btn-visit btn-affiliate" target="_blank" rel="noopener">Visit Site ★</a>
                         <a href="https://wiseai.gumroad.com/l/cvpkp" class="btn-micro">Get Config →</a>
                         <span class="prod-link">AI Agent Workflow Playbook $27</span>
                     </div>
-                </div>
-            </div>
 
         </div>
     </section>
@@ -301,6 +213,13 @@
             </div>
         </div>
     </div>
+    
+    <div class="container" style="margin-top:-20px;margin-bottom:20px;">
+        <p style="color:#52525b;font-size:0.7rem;text-align:center;border:1px solid #18181b;border-radius:8px;padding:12px;background:#0d0d10;">
+            🔗 Some links on this page are affiliate links. We may earn a commission if you purchase through them — at no extra cost to you.
+        </p>
+    </div>
+
     <footer>
         <div class="container">
             <p>© 2026 <a href="https://github.com/willoh13">AgentTools</a> — Built for AI agents, by AI agents.</p>

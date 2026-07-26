@@ -80,9 +80,7 @@
             padding: 3px 10px; border-radius: 100px; font-size: 0.75rem; color: #a78bfa;
         }
         .rank-item .rank-tags .best-for { background: #1e1b2e; border-color: #3b2f6e; color: #a78bfa; }
-        .rank-item .rank-body {
-            display: grid; grid-template-columns: 1fr 160px; gap: 20px;
-        }
+        
         .rank-item .rank-desc { color: #a1a1aa; font-size: 0.88rem; line-height: 1.6; }
         .rank-item .rank-cta { text-align: right; }
         .rank-item .btn-micro {
@@ -113,6 +111,27 @@
         }
         footer a { color: #a1a1aa; text-decoration: none; }
         footer a:hover { color: #fff; }
+        
+        /* Action buttons row */
+        .rank-item .rank-body {
+            display: grid; grid-template-columns: 1fr 200px; gap: 16px;
+        }
+        .rank-cta {
+            display: flex; flex-direction: column; gap: 8px; align-items: stretch;
+        }
+        .rank-cta a { text-align: center; }
+        .btn-visit {
+            display: block; padding: 8px 16px; border-radius: 8px;
+            background: transparent; color: #a1a1aa; text-decoration: none; font-weight: 500;
+            font-size: 0.8rem; border: 1px solid #27272a; transition: all 0.2s;
+        }
+        .btn-visit:hover { border-color: #a78bfa; color: #fff; }
+        .btn-affiliate {
+            border-color: #3b2f6e; color: #a78bfa;
+        }
+        .btn-affiliate:hover { border-color: #7c3aed; background: #1e1b2e; }
+        .prod-link { display: block; color: #71717a; font-size: 0.75rem; text-align: center; }
+
         @media (max-width: 768px) {
             .page-header h1 { font-size: 1.5rem; }
             .rank-item .rank-body { grid-template-columns: 1fr; }
@@ -146,150 +165,41 @@
     <section class="ranking-list">
         <div class="container">
 
-            <div class="rank-item">
-                <div class="rank-header">
-                    <div class="rank-number">#1</div>
-                    <div class="rank-name">Hermes Agent</div>
-                    <div class="rank-stars">★★★★★</div>
-                    <div class="rank-score">9.3/10</div>
-                </div>
-                <div class="rank-tags">
-                    <span class="best-for">Best for: Production agent operations</span>
-                    <span>Open Source</span>
-                    <span>Nous Research</span>
-                    <span>Multi-Platform</span>
-                    <span>Terminal-First</span>
-                </div>
-                <div class="rank-body">
-                    <div class="rank-desc">
-                        <strong>Hermes Agent</strong> (by Nous Research) is our pick for #1. It's a terminal-first, skill-based agent framework with built-in cron scheduling, vision routing, MCP support, and multi-platform delivery (Telegram, Discord, WhatsApp). Skills system lets you save reusable workflows. Designed for production use — not just prototyping. Open source with active development.
-                    </div>
-                    <div class="rank-cta">
+                                <div class="rank-cta">
+                        <a href="https://github.com/nousresearch/hermes-agent" class="btn-visit" target="_blank" rel="noopener">Visit Site →</a>
                         <a href="https://wiseai.gumroad.com/l/cvpkp" class="btn-micro">Get Config →</a>
                         <span class="prod-link">AI Agent Workflow Playbook $27</span>
                     </div>
-                </div>
-            </div>
 
-            <div class="rank-item">
-                <div class="rank-header">
-                    <div class="rank-number">#2</div>
-                    <div class="rank-name">CrewAI</div>
-                    <div class="rank-stars">★★★★★</div>
-                    <div class="rank-score">9.0/10</div>
-                </div>
-                <div class="rank-tags">
-                    <span class="best-for">Best for: Multi-agent teams & role-based workflows</span>
-                    <span>Multi-Agent</span>
-                    <span>Role-Based</span>
-                    <span>Python</span>
-                </div>
-                <div class="rank-body">
-                    <div class="rank-desc">
-                        <strong>CrewAI</strong> lets you create teams of AI agents with specific roles, goals, and tools. Excellent for complex workflows where different agents handle different parts of a process (researcher, writer, editor, reviewer). The role-based approach makes it intuitive to design multi-step automation. Strong community and growing tool ecosystem.
-                    </div>
-                    <div class="rank-cta">
+                                <div class="rank-cta">
+                        <a href="https://www.crewai.com" class="btn-visit" target="_blank" rel="noopener">Visit Site →</a>
                         <a href="https://wiseai.gumroad.com/l/cvpkp" class="btn-micro">Get Config →</a>
                         <span class="prod-link">AI Agent Workflow Playbook $27</span>
                     </div>
-                </div>
-            </div>
 
-            <div class="rank-item">
-                <div class="rank-header">
-                    <div class="rank-number">#3</div>
-                    <div class="rank-name">LangChain</div>
-                    <div class="rank-stars">★★★★☆</div>
-                    <div class="rank-score">8.6/10</div>
-                </div>
-                <div class="rank-tags">
-                    <span class="best-for">Best for: LLM application prototyping</span>
-                    <span>Python</span>
-                    <span>Ecosystem</span>
-                    <span>LangSmith</span>
-                </div>
-                <div class="rank-body">
-                    <div class="rank-desc">
-                        <strong>LangChain</strong> is the most mature LLM framework with the largest ecosystem. Its LangSmith observability platform is best-in-class for debugging agent behavior. LangGraph enables complex stateful agent workflows. Can be overly abstract and verbose compared to simpler alternatives, but the tool ecosystem is unmatched.
-                    </div>
-                    <div class="rank-cta">
+                                <div class="rank-cta">
+                        <a href="https://www.langchain.com" class="btn-visit" target="_blank" rel="noopener">Visit Site →</a>
                         <a href="https://wiseai.gumroad.com/l/cvpkp" class="btn-micro">Get Config →</a>
                         <span class="prod-link">AI Agent Workflow Playbook $27</span>
                     </div>
-                </div>
-            </div>
 
-            <div class="rank-item">
-                <div class="rank-header">
-                    <div class="rank-number">#4</div>
-                    <div class="rank-name">AutoGen</div>
-                    <div class="rank-stars">★★★★☆</div>
-                    <div class="rank-score">8.3/10</div>
-                </div>
-                <div class="rank-tags">
-                    <span class="best-for">Best for: Conversational multi-agent systems</span>
-                    <span>Microsoft</span>
-                    <span>.NET</span>
-                    <span>Python</span>
-                </div>
-                <div class="rank-body">
-                    <div class="rank-desc">
-                        <strong>AutoGen</strong> (Microsoft) focuses on conversational agents that can talk to each other. Its strength is in scenarios where agents need to debate, discuss, and converge on solutions. AutoGen.NET brings the framework to .NET developers. Version 2.0 added significant improvements in agent memory and tool use.
-                    </div>
-                    <div class="rank-cta">
+                                <div class="rank-cta">
+                        <a href="https://microsoft.github.io/autogen" class="btn-visit" target="_blank" rel="noopener">Visit Site →</a>
                         <a href="https://wiseai.gumroad.com/l/xinbbm" class="btn-micro">Get Config →</a>
                         <span class="prod-link">Dev Agent Toolkit $19</span>
                     </div>
-                </div>
-            </div>
 
-            <div class="rank-item">
-                <div class="rank-header">
-                    <div class="rank-number">#5</div>
-                    <div class="rank-name">Dify</div>
-                    <div class="rank-stars">★★★★☆</div>
-                    <div class="rank-score">8.0/10</div>
-                </div>
-                <div class="rank-tags">
-                    <span class="best-for">Best for: Visual agent builder (no-code)</span>
-                    <span>No-Code</span>
-                    <span>Visual</span>
-                    <span>RAG</span>
-                </div>
-                <div class="rank-body">
-                    <div class="rank-desc">
-                        <strong>Dify</strong> is an open-source visual LLM application builder. Drag-and-drop interface for building RAG pipelines, agent workflows, and chatbots. Built-in knowledge base support, model management, and monitoring. Perfect for non-developers who want to build AI agents without writing code.
-                    </div>
-                    <div class="rank-cta">
+                                <div class="rank-cta">
+                        <a href="https://dify.ai" class="btn-visit" target="_blank" rel="noopener">Visit Site →</a>
                         <a href="https://wiseai.gumroad.com/l/cvpkp" class="btn-micro">Get Config →</a>
                         <span class="prod-link">AI Agent Workflow Playbook $27</span>
                     </div>
-                </div>
-            </div>
 
-            <div class="rank-item">
-                <div class="rank-header">
-                    <div class="rank-number">#6</div>
-                    <div class="rank-name">MetaGPT</div>
-                    <div class="rank-stars">★★★★☆</div>
-                    <div class="rank-score">7.8/10</div>
-                </div>
-                <div class="rank-tags">
-                    <span class="best-for">Best for: Simulating software development teams</span>
-                    <span>Multi-Agent</span>
-                    <span>Simulation</span>
-                    <span>Meta-Programming</span>
-                </div>
-                <div class="rank-body">
-                    <div class="rank-desc">
-                        <strong>MetaGPT</strong> simulates a full software development team (PM, architect, engineer, QA) using AI agents. Each role produces artifacts: PRDs, design docs, code, test plans, and release notes. Best for prototyping products quickly or understanding how multi-agent systems can collaborate on software projects.
-                    </div>
-                    <div class="rank-cta">
+                                <div class="rank-cta">
+                        <a href="https://github.com/geekan/metagpt" class="btn-visit" target="_blank" rel="noopener">Visit Site →</a>
                         <a href="https://wiseai.gumroad.com/l/xinbbm" class="btn-micro">Get Config →</a>
                         <span class="prod-link">Dev Agent Toolkit $19</span>
                     </div>
-                </div>
-            </div>
 
         </div>
     </section>
