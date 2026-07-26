@@ -82,10 +82,11 @@
             padding: 3px 10px; border-radius: 100px; font-size: 0.75rem; color: #a78bfa;
         }
         .rank-item .rank-tags .best-for { background: #1e1b2e; border-color: #3b2f6e; color: #a78bfa; }
-        
+        .rank-item .rank-body {
+            display: grid; grid-template-columns: 1fr 160px; gap: 20px;
+        }
         .rank-item .rank-desc { color: #a1a1aa; font-size: 0.88rem; line-height: 1.6; }
-        .rank-item .rank-cta { text-align: right; }
-        .rank-item .btn-micro {
+                .rank-item .btn-micro {
             display: inline-block; padding: 8px 18px; border-radius: 8px;
             background: #7c3aed; color: #fff; text-decoration: none; font-weight: 600;
             font-size: 0.8rem; transition: all 0.2s;
@@ -113,9 +114,7 @@
         }
         footer a { color: #a1a1aa; text-decoration: none; }
         footer a:hover { color: #fff; }
-        
-        /* Action buttons row */
-        .rank-item .rank-body {
+                .rank-item .rank-body {
             display: grid; grid-template-columns: 1fr 200px; gap: 16px;
         }
         .rank-cta {
@@ -128,11 +127,7 @@
             font-size: 0.8rem; border: 1px solid #27272a; transition: all 0.2s;
         }
         .btn-visit:hover { border-color: #a78bfa; color: #fff; }
-        .btn-affiliate {
-            border-color: #3b2f6e; color: #a78bfa;
-        }
-        .btn-affiliate:hover { border-color: #7c3aed; background: #1e1b2e; }
-        .prod-link { display: block; color: #71717a; font-size: 0.75rem; text-align: center; }
+        .prod-link { display: block; color: #71717a; font-size: 0.75rem; text-align: center; margin-top: 0px; }
 
         @media (max-width: 768px) {
             .page-header h1 { font-size: 1.5rem; }
@@ -167,53 +162,205 @@
     <section class="ranking-list">
         <div class="container">
 
-                                <div class="rank-cta">
+            <div class="rank-item">
+                <div class="rank-header">
+                    <div class="rank-number">#1</div>
+                    <div class="rank-name">DeepSeek V4 Flash</div>
+                    <div class="rank-stars">★★★★★</div>
+                    <div class="rank-score">9.4/10</div>
+                </div>
+                <div class="rank-tags">
+                    <span class="best-for">Best for: Coding & agentic tasks</span>
+                    <span>DeepSeek</span>
+                    <span>671B MoE</span>
+                    <span>Flash Variant</span>
+                </div>
+                <div class="rank-body">
+                    <div class="rank-desc">
+                        <strong>DeepSeek V4 Flash</strong> is the current best-in-class open-source model for coding and agentic tasks. The Mixture-of-Experts architecture means it's fast and cost-effective (significant portion of tokens are free). Matches or beats GPT-5 on many coding benchmarks. The Flash variant is optimized for speed without sacrificing quality.
+                    </div>
+                                        <div class="rank-cta">
                         <a href="https://chat.deepseek.com" class="btn-visit" target="_blank" rel="noopener">Visit Site →</a>
                         <a href="https://wiseai.gumroad.com/l/cvpkp" class="btn-micro">Get Config →</a>
                         <span class="prod-link">AI Agent Workflow Playbook $27</span>
                     </div>
+                </div>
+            </div>
 
-                                <div class="rank-cta">
+            <div class="rank-item">
+                <div class="rank-header">
+                    <div class="rank-number">#2</div>
+                    <div class="rank-name">Llama 4</div>
+                    <div class="rank-stars">★★★★★</div>
+                    <div class="rank-score">9.1/10</div>
+                </div>
+                <div class="rank-tags">
+                    <span class="best-for">Best for: General-purpose & fine-tuning</span>
+                    <span>Meta</span>
+                    <span>MoE</span>
+                    <span>Multimodal</span>
+                </div>
+                <div class="rank-body">
+                    <div class="rank-desc">
+                        <strong>Llama 4</strong> (Meta) is a multimodal MoE model available in various sizes. Strong all-around performer for general tasks. The open license allows commercial use and fine-tuning. Excellent ecosystem support with tools, quantization, and deployment options. The best model if you want to fine-tune for a specific domain.
+                    </div>
+                                        <div class="rank-cta">
                         <a href="https://www.llama.com" class="btn-visit" target="_blank" rel="noopener">Visit Site →</a>
                         <a href="https://wiseai.gumroad.com/l/xinbbm" class="btn-micro">Get Config →</a>
                         <span class="prod-link">Dev Agent Toolkit $19</span>
                     </div>
+                </div>
+            </div>
 
-                                <div class="rank-cta">
+            <div class="rank-item">
+                <div class="rank-header">
+                    <div class="rank-number">#3</div>
+                    <div class="rank-name">Qwen 3.5</div>
+                    <div class="rank-stars">★★★★★</div>
+                    <div class="rank-score">9.0/10</div>
+                </div>
+                <div class="rank-tags">
+                    <span class="best-for">Best for: Multilingual & math reasoning</span>
+                    <span>Alibaba</span>
+                    <span>Up to 397B</span>
+                    <span>Multimodal</span>
+                </div>
+                <div class="rank-body">
+                    <div class="rank-desc">
+                        <strong>Qwen 3.5</strong> (Alibaba) excels at multilingual tasks and complex mathematical reasoning. Available in sizes from 0.8B to 397B parameters. The 397B version competes with DeepSeek on benchmarks. Strong vision capabilities across all sizes. Best open model for non-English languages and technical reasoning.
+                    </div>
+                                        <div class="rank-cta">
                         <a href="https://github.com/QwenLM/Qwen" class="btn-visit" target="_blank" rel="noopener">Visit Site →</a>
                         <a href="https://wiseai.gumroad.com/l/cvpkp" class="btn-micro">Get Config →</a>
                         <span class="prod-link">AI Agent Workflow Playbook $27</span>
                     </div>
+                </div>
+            </div>
 
-                                <div class="rank-cta">
+            <div class="rank-item">
+                <div class="rank-header">
+                    <div class="rank-number">#4</div>
+                    <div class="rank-name">Gemma 4</div>
+                    <div class="rank-stars">★★★★★</div>
+                    <div class="rank-score">8.8/10</div>
+                </div>
+                <div class="rank-tags">
+                    <span class="best-for">Best for: Multimodal & vision tasks</span>
+                    <span>Google DeepMind</span>
+                    <span>12B-31B</span>
+                    <span>Vision+Audio</span>
+                </div>
+                <div class="rank-body">
+                    <div class="rank-desc">
+                        <strong>Gemma 4</strong> (Google DeepMind) is a multimodal model family (12B, 26B, 31B) with strong vision capabilities. Supports text, image, and audio input. The 31B version is particularly strong for vision tasks and agentic workflows. Great as a vision-capable fallback model for text-only agents.
+                    </div>
+                                        <div class="rank-cta">
                         <a href="https://ai.google.dev/gemma" class="btn-visit" target="_blank" rel="noopener">Visit Site →</a>
                         <a href="https://wiseai.gumroad.com/l/cvpkp" class="btn-micro">Get Config →</a>
                         <span class="prod-link">AI Agent Workflow Playbook $27</span>
                     </div>
+                </div>
+            </div>
 
-                                <div class="rank-cta">
+            <div class="rank-item">
+                <div class="rank-header">
+                    <div class="rank-number">#5</div>
+                    <div class="rank-name">Mistral Large 3</div>
+                    <div class="rank-stars">★★★★☆</div>
+                    <div class="rank-score">8.6/10</div>
+                </div>
+                <div class="rank-tags">
+                    <span class="best-for">Best for: European language quality</span>
+                    <span>Mistral AI</span>
+                    <span>128B</span>
+                    <span>Multilingual</span>
+                </div>
+                <div class="rank-body">
+                    <div class="rank-desc">
+                        <strong>Mistral Large 3</strong> (Mistral AI) is a 128B dense model that excels at multilingual tasks, especially European languages. Strong coding and reasoning capabilities. Differentiates itself with a focus on language quality and reduced hallucinations. Excellent API with competitive pricing.
+                    </div>
+                                        <div class="rank-cta">
                         <a href="https://mistral.ai" class="btn-visit" target="_blank" rel="noopener">Visit Site →</a>
                         <a href="https://wiseai.gumroad.com/l/xinbbm" class="btn-micro">Get Config →</a>
                         <span class="prod-link">Dev Agent Toolkit $19</span>
                     </div>
+                </div>
+            </div>
 
-                                <div class="rank-cta">
+            <div class="rank-item">
+                <div class="rank-header">
+                    <div class="rank-number">#6</div>
+                    <div class="rank-name">Phi-4</div>
+                    <div class="rank-stars">★★★★☆</div>
+                    <div class="rank-score">8.3/10</div>
+                </div>
+                <div class="rank-tags">
+                    <span class="best-for">Best for: Small model efficiency</span>
+                    <span>Microsoft</span>
+                    <span>14B</span>
+                    <span>Efficient</span>
+                </div>
+                <div class="rank-body">
+                    <div class="rank-desc">
+                        <strong>Phi-4</strong> (Microsoft) punches way above its 14B weight class — matching or beating models 3x its size on key benchmarks. Extremely efficient, runs on consumer hardware. Best pick when you need a capable model that runs on a single GPU. Remarkable reasoning for its size.
+                    </div>
+                                        <div class="rank-cta">
                         <a href="https://azure.microsoft.com/products/phi" class="btn-visit" target="_blank" rel="noopener">Visit Site →</a>
                         <a href="https://wiseai.gumroad.com/l/xinbbm" class="btn-micro">Get Config →</a>
                         <span class="prod-link">Dev Agent Toolkit $19</span>
                     </div>
+                </div>
+            </div>
 
-                                <div class="rank-cta">
+            <div class="rank-item">
+                <div class="rank-header">
+                    <div class="rank-number">#7</div>
+                    <div class="rank-name">Yi-Lightning</div>
+                    <div class="rank-stars">★★★★☆</div>
+                    <div class="rank-score">8.0/10</div>
+                </div>
+                <div class="rank-tags">
+                    <span class="best-for">Best for: Speed & cost optimization</span>
+                    <span>01.AI</span>
+                    <span>Fast</span>
+                    <span>Cost-Effective</span>
+                </div>
+                <div class="rank-body">
+                    <div class="rank-desc">
+                        <strong>Yi-Lightning</strong> (01.AI / Kai-Fu Lee) is optimized for speed and low cost while maintaining strong quality. One of the fastest open-source models available. Excellent choice for applications where latency matters and budget is a concern. Competitive with much larger models on common benchmarks.
+                    </div>
+                                        <div class="rank-cta">
                         <a href="https://www.lingyiwanwu.com" class="btn-visit" target="_blank" rel="noopener">Visit Site →</a>
                         <a href="https://wiseai.gumroad.com/l/cvpkp" class="btn-micro">Get Config →</a>
                         <span class="prod-link">AI Agent Workflow Playbook $27</span>
                     </div>
+                </div>
+            </div>
 
-                                <div class="rank-cta">
+            <div class="rank-item">
+                <div class="rank-header">
+                    <div class="rank-number">#8</div>
+                    <div class="rank-name">DeepSeek R1</div>
+                    <div class="rank-stars">★★★★☆</div>
+                    <div class="rank-score">7.9/10</div>
+                </div>
+                <div class="rank-tags">
+                    <span class="best-for">Best for: Complex reasoning & math</span>
+                    <span>DeepSeek</span>
+                    <span>Reasoning</span>
+                    <span>Chain-of-Thought</span>
+                </div>
+                <div class="rank-body">
+                    <div class="rank-desc">
+                        <strong>DeepSeek R1</strong> is a reasoning-focused model that excels at multi-step problems, math, and logic. Uses chain-of-thought reasoning to work through complex problems step by step. Slower than Flash but more accurate on hard problems. Best when you need thorough reasoning rather than quick answers.
+                    </div>
+                                        <div class="rank-cta">
                         <a href="https://chat.deepseek.com" class="btn-visit" target="_blank" rel="noopener">Visit Site →</a>
                         <a href="https://wiseai.gumroad.com/l/cvpkp" class="btn-micro">Get Config →</a>
                         <span class="prod-link">AI Agent Workflow Playbook $27</span>
                     </div>
+                </div>
+            </div>
 
         </div>
     </section>
