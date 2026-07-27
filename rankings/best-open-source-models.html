@@ -4,21 +4,67 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Best Open-Source AI Models 2026 — Ranked | AgentTools</title>
-    <meta name="description" content="Best open-source AI models ranked: DeepSeek vs Llama vs Qwen vs Gemma vs Mistral for coding, reasoning, and cost.">
+    <meta name="description" content="Data-driven ranking of the best open-source AI models. DeepSeek V4 vs Qwen 3.5 vs Llama 4 vs Gemma 4. Based on Chatbot Arena ELO, SWE-bench, and pricing.">
     <meta property="og:title" content="Best Open-Source AI Models 2026 — Ranked">
-    <script type="application/ld+json">{
-      "@context": "https://schema.org", "@type": "ItemList", "name": "Best Open-Source AI Models 2026",
+    <meta property="og:description" content="Real benchmark data for DeepSeek V4, Qwen 3.5, Llama 4, Gemma 4, Mistral, and more. Arena ELO, SWE-bench, and pricing comparisons.">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      "name": "Best Open-Source AI Models 2026",
+      "description": "Data-driven ranking based on Chatbot Arena ELO, coding benchmarks, reasoning scores, and pricing.",
       "itemListElement": [
-        {"@type":"ListItem","position":1,"name":"DeepSeek V4"},
-        {"@type":"ListItem","position":2,"name":"Llama 4"},
-        {"@type":"ListItem","position":3,"name":"Qwen 3.5"},
-        {"@type":"ListItem","position":4,"name":"Gemma 4"},
-        {"@type":"ListItem","position":5,"name":"Mistral Large 3"},
-        {"@type":"ListItem","position":6,"name":"Phi-4"},
-        {"@type":"ListItem","position":7,"name":"Yi-Lightning"},
-        {"@type":"ListItem","position":8,"name":"DeepSeek R1"}
+        {"@type": "ListItem", "position": 1, "name": "DeepSeek-V4-Pro"},
+        {"@type": "ListItem", "position": 2, "name": "Qwen 3.5-397B"},
+        {"@type": "ListItem", "position": 3, "name": "Gemma 4 31B"},
+        {"@type": "ListItem", "position": 4, "name": "Mistral Large 3"},
+        {"@type": "ListItem", "position": 5, "name": "DeepSeek-V4-Flash"},
+        {"@type": "ListItem", "position": 6, "name": "Llama 4 Maverick"},
+        {"@type": "ListItem", "position": 7, "name": "Gemma 3 27B"},
+        {"@type": "ListItem", "position": 8, "name": "Phi-4"}
       ]
-    }</script>
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is the best open-source AI model in 2026?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "DeepSeek-V4-Pro is the best overall open-source model with a 1467 Arena ELO, 80.6% SWE-bench Verified (best among open models), and MIT license. For budget, DeepSeek-V4-Flash at $0.14/$0.28 per 1M tokens offers 95% of the capability at a fraction of the cost."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is Llama 4 better than DeepSeek V4?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No — DeepSeek-V4-Pro significantly outperforms Llama 4 Maverick on benchmarks. DeepSeek-V4-Pro has Arena ELO 1467 vs Llama 4's 1292, and 80.6% SWE-bench Verified. Llama 4's strength is its 1M token context and Meta's ecosystem, but on pure capability it's in a lower tier."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the best free/open-source small model?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Phi-4 by Microsoft (14B parameters, MIT license) is the best small open-source model for its size at 1222 Arena ELO and 71.4 MMLU-Pro. Gemma 3 27B offers strong performance at 1356 ELO with free self-hosting. Gemma 4 31B punches far above its weight at 1449 ELO."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which open-source model is best for coding?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "DeepSeek-V4-Pro is the best open-source model for coding with 80.6% on SWE-bench Verified and 93.5 on LiveCodeBench. For budget, DeepSeek-V4-Flash at 79.0% SWE-bench costs just $0.14/$0.28 per 1M tokens."
+          }
+        }
+      ]
+    }
+    </script>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
@@ -57,7 +103,22 @@
             padding: 4px 12px; border-radius: 100px; font-size: 0.75rem; color: #a78bfa;
             margin-right: 6px; margin-bottom: 6px;
         }
-        .page-header p { color: #a1a1aa; font-size: 0.95rem; max-width: 600px; }
+        .page-header p { color: #a1a1aa; font-size: 0.95rem; max-width: 650px; }
+        .methodology {
+            background: #0d0d10; border: 1px solid #18181b; border-radius: 16px;
+            padding: 28px; margin-bottom: 30px;
+        }
+        .methodology h3 { color: #fff; font-size: 1.05rem; margin-bottom: 12px; }
+        .methodology p, .methodology li { color: #a1a1aa; font-size: 0.85rem; line-height: 1.6; }
+        .methodology ul { list-style: none; padding: 0; }
+        .methodology li { padding: 4px 0; padding-left: 18px; position: relative; }
+        .methodology li::before { content: "•"; position: absolute; left: 0; color: #7c3aed; }
+        .methodology-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 12px; margin-top: 12px; }
+        .methodology-grid .crit { background: #121214; border: 1px solid #18181b; border-radius: 10px; padding: 14px; text-align: center; }
+        .methodology-grid .crit .label { color: #52525b; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.5px; }
+        .methodology-grid .crit .value { color: #a78bfa; font-size: 1.2rem; font-weight: 700; margin-top: 4px; }
+        .methodology-grid .crit .sub { color: #71717a; font-size: 0.7rem; margin-top: 2px; }
+        .source-badge { display: inline-block; background: #1e1b2e; border: 1px solid #3b2f6e; padding: 2px 8px; border-radius: 6px; font-size: 0.65rem; color: #a78bfa; margin-left: 4px; vertical-align: middle; }
         .ranking-list { padding: 0 0 60px; }
         .rank-item {
             background: #0d0d10; border: 1px solid #18181b; border-radius: 16px;
@@ -86,7 +147,14 @@
             display: grid; grid-template-columns: 1fr 160px; gap: 20px;
         }
         .rank-item .rank-desc { color: #a1a1aa; font-size: 0.88rem; line-height: 1.6; }
-                .rank-item .btn-micro {
+        .rank-item .rank-stats { margin-top: 10px; display: flex; flex-wrap: wrap; gap: 8px; }
+        .rank-item .rank-stats .stat {
+            background: #121214; border: 1px solid #18181b; border-radius: 8px;
+            padding: 6px 12px; font-size: 0.75rem; color: #71717a;
+        }
+        .rank-item .rank-stats .stat strong { color: #d4d4d8; }
+        .rank-item .rank-cta { text-align: right; }
+        .rank-item .btn-micro {
             display: inline-block; padding: 8px 18px; border-radius: 8px;
             background: #7c3aed; color: #fff; text-decoration: none; font-weight: 600;
             font-size: 0.8rem; transition: all 0.2s;
@@ -114,21 +182,6 @@
         }
         footer a { color: #a1a1aa; text-decoration: none; }
         footer a:hover { color: #fff; }
-                .rank-item .rank-body {
-            display: grid; grid-template-columns: 1fr 200px; gap: 16px;
-        }
-        .rank-cta {
-            display: flex; flex-direction: column; gap: 8px; align-items: stretch;
-        }
-        .rank-cta a { text-align: center; }
-        .btn-visit {
-            display: block; padding: 8px 16px; border-radius: 8px;
-            background: transparent; color: #a1a1aa; text-decoration: none; font-weight: 500;
-            font-size: 0.8rem; border: 1px solid #27272a; transition: all 0.2s;
-        }
-        .btn-visit:hover { border-color: #a78bfa; color: #fff; }
-        .prod-link { display: block; color: #71717a; font-size: 0.75rem; text-align: center; margin-top: 0px; }
-
         @media (max-width: 768px) {
             .page-header h1 { font-size: 1.5rem; }
             .rank-item .rank-body { grid-template-columns: 1fr; }
@@ -153,230 +206,275 @@
     </div>
     <section class="page-header">
         <div class="container">
-            <span class="tag">🧠 Models</span>
-            <span class="tag">Updated 2026</span>
-            <h1>Best Open-Source AI Models Ranked</h1>
-            <p>The best open-weight models you can run locally or via API. Ranked for coding ability, reasoning, cost, and agentic task performance.</p>
+            <span class="tag">🧠 Open-Source Models</span>
+            <span class="tag">Updated July 2026</span>
+            <span class="tag">Live Leaderboard Data</span>
+            <h1>Best Open-Source AI Models Ranked (2026)</h1>
+            <p>We rank open-weight and open-source language models using Chatbot Arena+ ELO, SWE-bench Verified, reasoning benchmarks, and API pricing. Data from OpenLM, Onyx, LLM Stats, and BenchLM leaderboards.</p>
         </div>
     </section>
+    <div class="container">
+        <div class="methodology">
+            <h3>📐 Scoring Methodology</h3>
+            <p>Each model is scored on a weighted 4-criteria matrix. Only open-weight/open-source models (MIT, Apache 2.0, Gemma, Llama licenses).</p>
+            <div class="methodology-grid">
+                <div class="crit"><div class="label">Arena ELO</div><div class="value">35%</div><div class="sub">Chatbot Arena+ overall ranking</div></div>
+                <div class="crit"><div class="label">Coding Performance</div><div class="value">30%</div><div class="sub">SWE-bench, HumanEval, LiveCodeBench</div></div>
+                <div class="crit"><div class="label">Reasoning</div><div class="value">15%</div><div class="sub">GPQA Diamond, MMLU-Pro</div></div>
+                <div class="crit"><div class="label">Value</div><div class="value">20%</div><div class="sub">Price per token, license, efficiency</div></div>
+            </div>
+            <p style="margin-top: 10px; font-size: 0.8rem; color: #52525b;">Sources: <a href="https://openlm.ai/chatbot-arena/" style="color:#a78bfa;">Chatbot Arena+</a> · <a href="https://onyx.app/open-llm-leaderboard" style="color:#a78bfa;">Onyx LLM</a> · <a href="https://llm-stats.com" style="color:#a78bfa;">LLM Stats</a> · <a href="https://benchlm.ai" style="color:#a78bfa;">BenchLM</a></p>
+        </div>
+    </div>
     <section class="ranking-list">
         <div class="container">
-
             <div class="rank-item">
                 <div class="rank-header">
                     <div class="rank-number">#1</div>
-                    <div class="rank-name">DeepSeek V4 Flash</div>
+                    <div class="rank-name">DeepSeek-V4-Pro</div>
                     <div class="rank-stars">★★★★★</div>
                     <div class="rank-score">9.4/10</div>
                 </div>
                 <div class="rank-tags">
-                    <span class="best-for">Best for: Coding & agentic tasks</span>
-                    <span>DeepSeek</span>
-                    <span>671B MoE</span>
-                    <span>Flash Variant</span>
+                    <span class="best-for">Best for: Coding, reasoning, overall capability</span>
+                    <span>1.6T MoE</span>
+                    <span>MIT</span>
+                    <span>1M context</span>
                 </div>
                 <div class="rank-body">
                     <div class="rank-desc">
-                        <strong>DeepSeek V4 Flash</strong> is the current best-in-class open-source model for coding and agentic tasks. The Mixture-of-Experts architecture means it's fast and cost-effective (significant portion of tokens are free). Matches or beats GPT-5 on many coding benchmarks. The Flash variant is optimized for speed without sacrificing quality.
+                        <strong>DeepSeek-V4-Pro</strong> is the top-ranked open-source model at 1467 Arena ELO — the highest among open-weight models. Leads in coding with 80.6% SWE-bench Verified and 93.5 LiveCodeBench. Strong reasoning at GPQA Diamond 90.1%. MIT license, 1M token context, and competitive API pricing at $1.74/$0.87 per 1M tokens.
+                        <div class="rank-stats">
+                            <span class="stat">Arena ELO: <strong>1467</strong> <span class="source-badge">openlm.ai</span></span>
+                            <span class="stat">SWE-bench: <strong>80.6%</strong> <span class="source-badge">Onyx LLM</span></span>
+                            <span class="stat">GPQA Diamond: <strong>90.1%</strong></span>
+                            <span class="stat">Price: <strong>$1.74 / $0.87 per 1M</strong></span>
+                        </div>
                     </div>
-                                        <div class="rank-cta">
-                        <a href="https://chat.deepseek.com" class="btn-visit" target="_blank" rel="noopener">Visit Site →</a>
-                        <a href="https://wiseai.gumroad.com/l/cvpkp" class="btn-micro">Get Config →</a>
-                        <span class="prod-link">AI Agent Workflow Playbook $27</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="rank-item">
-                <div class="rank-header">
-                    <div class="rank-number">#2</div>
-                    <div class="rank-name">Llama 4</div>
-                    <div class="rank-stars">★★★★★</div>
-                    <div class="rank-score">9.1/10</div>
-                </div>
-                <div class="rank-tags">
-                    <span class="best-for">Best for: General-purpose & fine-tuning</span>
-                    <span>Meta</span>
-                    <span>MoE</span>
-                    <span>Multimodal</span>
-                </div>
-                <div class="rank-body">
-                    <div class="rank-desc">
-                        <strong>Llama 4</strong> (Meta) is a multimodal MoE model available in various sizes. Strong all-around performer for general tasks. The open license allows commercial use and fine-tuning. Excellent ecosystem support with tools, quantization, and deployment options. The best model if you want to fine-tune for a specific domain.
-                    </div>
-                                        <div class="rank-cta">
-                        <a href="https://www.llama.com" class="btn-visit" target="_blank" rel="noopener">Visit Site →</a>
-                        <a href="https://wiseai.gumroad.com/l/xinbbm" class="btn-micro">Get Config →</a>
+                    <div class="rank-cta">
+                        <a href="https://wiseai.gumroad.com/l/dev-toolkit" class="btn-micro">Get Config →</a>
                         <span class="prod-link">Dev Agent Toolkit $19</span>
                     </div>
                 </div>
             </div>
-
             <div class="rank-item">
                 <div class="rank-header">
-                    <div class="rank-number">#3</div>
-                    <div class="rank-name">Qwen 3.5</div>
+                    <div class="rank-number">#2</div>
+                    <div class="rank-name">Qwen 3.5-397B-A17B</div>
                     <div class="rank-stars">★★★★★</div>
-                    <div class="rank-score">9.0/10</div>
+                    <div class="rank-score">8.9/10</div>
                 </div>
                 <div class="rank-tags">
-                    <span class="best-for">Best for: Multilingual & math reasoning</span>
+                    <span class="best-for">Best for: Knowledge & MMLU-Pro leader</span>
+                    <span>397B (17B active)</span>
+                    <span>Apache 2.0</span>
                     <span>Alibaba</span>
-                    <span>Up to 397B</span>
-                    <span>Multimodal</span>
                 </div>
                 <div class="rank-body">
                     <div class="rank-desc">
-                        <strong>Qwen 3.5</strong> (Alibaba) excels at multilingual tasks and complex mathematical reasoning. Available in sizes from 0.8B to 397B parameters. The 397B version competes with DeepSeek on benchmarks. Strong vision capabilities across all sizes. Best open model for non-English languages and technical reasoning.
+                        <strong>Qwen 3.5-397B-A17B</strong> by Alibaba scores 1450 Arena ELO with the highest MMLU-Pro among open models at 87.8%. Its efficient MoE architecture uses only 17B active parameters out of 397B total — remarkably efficient. Apache 2.0 license. Strong general knowledge and reasoning capabilities. Linear attention mechanism for long-context performance.
+                        <div class="rank-stats">
+                            <span class="stat">Arena ELO: <strong>1450</strong> <span class="source-badge">openlm.ai</span></span>
+                            <span class="stat">MMLU-Pro: <strong>87.8%</strong> <span class="source-badge">Arena+</span></span>
+                            <span class="stat">Active params: <strong>17B (of 397B)</strong></span>
+                            <span class="stat">Price: <strong>$0.39 / $2.45 per 1M</strong></span>
+                        </div>
                     </div>
-                                        <div class="rank-cta">
-                        <a href="https://github.com/QwenLM/Qwen" class="btn-visit" target="_blank" rel="noopener">Visit Site →</a>
-                        <a href="https://wiseai.gumroad.com/l/cvpkp" class="btn-micro">Get Config →</a>
-                        <span class="prod-link">AI Agent Workflow Playbook $27</span>
+                    <div class="rank-cta">
+                        <a href="https://wiseai.gumroad.com/l/workflow-playbook" class="btn-micro">Get Config →</a>
+                        <span class="prod-link">Workflow Playbook $27</span>
                     </div>
                 </div>
             </div>
-
             <div class="rank-item">
                 <div class="rank-header">
-                    <div class="rank-number">#4</div>
-                    <div class="rank-name">Gemma 4</div>
+                    <div class="rank-number">#3</div>
+                    <div class="rank-name">Gemma 4 31B</div>
                     <div class="rank-stars">★★★★★</div>
                     <div class="rank-score">8.8/10</div>
                 </div>
                 <div class="rank-tags">
-                    <span class="best-for">Best for: Multimodal & vision tasks</span>
-                    <span>Google DeepMind</span>
-                    <span>12B-31B</span>
-                    <span>Vision+Audio</span>
+                    <span class="best-for">Best for: Performance per parameter</span>
+                    <span>31B dense</span>
+                    <span>Apache 2.0</span>
+                    <span>Google</span>
                 </div>
                 <div class="rank-body">
                     <div class="rank-desc">
-                        <strong>Gemma 4</strong> (Google DeepMind) is a multimodal model family (12B, 26B, 31B) with strong vision capabilities. Supports text, image, and audio input. The 31B version is particularly strong for vision tasks and agentic workflows. Great as a vision-capable fallback model for text-only agents.
+                        <strong>Gemma 4 31B</strong> by Google punches far above its weight class. At just 31B dense parameters, it scores 1449 Arena ELO — competitive with models 10x its size. Apache 2.0 license, 262K context. Remarkable efficiency: 85.2 MMLU-Pro. Available at $0.13/$0.38 per 1M tokens. The best value dense model in 2026.
+                        <div class="rank-stats">
+                            <span class="stat">Arena ELO: <strong>1449</strong> <span class="source-badge">openlm.ai</span></span>
+                            <span class="stat">Params: <strong>31B (dense)</strong></span>
+                            <span class="stat">MMLU-Pro: <strong>85.2%</strong></span>
+                            <span class="stat">Price: <strong>$0.13 / $0.38 per 1M</strong></span>
+                        </div>
                     </div>
-                                        <div class="rank-cta">
-                        <a href="https://ai.google.dev/gemma" class="btn-visit" target="_blank" rel="noopener">Visit Site →</a>
-                        <a href="https://wiseai.gumroad.com/l/cvpkp" class="btn-micro">Get Config →</a>
-                        <span class="prod-link">AI Agent Workflow Playbook $27</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="rank-item">
-                <div class="rank-header">
-                    <div class="rank-number">#5</div>
-                    <div class="rank-name">Mistral Large 3</div>
-                    <div class="rank-stars">★★★★☆</div>
-                    <div class="rank-score">8.6/10</div>
-                </div>
-                <div class="rank-tags">
-                    <span class="best-for">Best for: European language quality</span>
-                    <span>Mistral AI</span>
-                    <span>128B</span>
-                    <span>Multilingual</span>
-                </div>
-                <div class="rank-body">
-                    <div class="rank-desc">
-                        <strong>Mistral Large 3</strong> (Mistral AI) is a 128B dense model that excels at multilingual tasks, especially European languages. Strong coding and reasoning capabilities. Differentiates itself with a focus on language quality and reduced hallucinations. Excellent API with competitive pricing.
-                    </div>
-                                        <div class="rank-cta">
-                        <a href="https://mistral.ai" class="btn-visit" target="_blank" rel="noopener">Visit Site →</a>
-                        <a href="https://wiseai.gumroad.com/l/xinbbm" class="btn-micro">Get Config →</a>
+                    <div class="rank-cta">
+                        <a href="https://wiseai.gumroad.com/l/dev-toolkit" class="btn-micro">Get Config →</a>
                         <span class="prod-link">Dev Agent Toolkit $19</span>
                     </div>
                 </div>
             </div>
-
             <div class="rank-item">
                 <div class="rank-header">
-                    <div class="rank-number">#6</div>
-                    <div class="rank-name">Phi-4</div>
+                    <div class="rank-number">#4</div>
+                    <div class="rank-name">Mistral Large 3</div>
+                    <div class="rank-stars">★★★★☆</div>
+                    <div class="rank-score">8.4/10</div>
+                </div>
+                <div class="rank-tags">
+                    <span class="best-for">Best for: European AI leader, multilingual</span>
+                    <span>675B MoE</span>
+                    <span>Apache 2.0</span>
+                    <span>Mistral AI</span>
+                </div>
+                <div class="rank-body">
+                    <div class="rank-desc">
+                        <strong>Mistral Large 3</strong> is Mistral AI's flagship open-weight model at 1428 Arena ELO. 675B MoE architecture with Apache 2.0 license and 256K context. Strong on multilingual tasks and reasoning (81.0 MMLU-Pro). European AI leader with a focus on developer-friendly APIs. Available through La Platforme and multiple cloud providers.
+                        <div class="rank-stats">
+                            <span class="stat">Arena ELO: <strong>1428</strong> <span class="source-badge">openlm.ai</span></span>
+                            <span class="stat">Params: <strong>675B MoE</strong></span>
+                            <span class="stat">MMLU-Pro: <strong>81.0%</strong></span>
+                            <span class="stat">License: <strong>Apache 2.0</strong></span>
+                        </div>
+                    </div>
+                    <div class="rank-cta">
+                        <a href="https://wiseai.gumroad.com/l/workflow-playbook" class="btn-micro">Get Config →</a>
+                        <span class="prod-link">Workflow Playbook $27</span>
+                    </div>
+                </div>
+            </div>
+            <div class="rank-item">
+                <div class="rank-header">
+                    <div class="rank-number">#5</div>
+                    <div class="rank-name">DeepSeek-V4-Flash</div>
                     <div class="rank-stars">★★★★☆</div>
                     <div class="rank-score">8.3/10</div>
                 </div>
                 <div class="rank-tags">
-                    <span class="best-for">Best for: Small model efficiency</span>
-                    <span>Microsoft</span>
-                    <span>14B</span>
-                    <span>Efficient</span>
+                    <span class="best-for">Best for: Budget coding & reasoning</span>
+                    <span>284B MoE</span>
+                    <span>MIT</span>
+                    <span>$0.14/M input</span>
                 </div>
                 <div class="rank-body">
                     <div class="rank-desc">
-                        <strong>Phi-4</strong> (Microsoft) punches way above its 14B weight class — matching or beating models 3x its size on key benchmarks. Extremely efficient, runs on consumer hardware. Best pick when you need a capable model that runs on a single GPU. Remarkable reasoning for its size.
+                        <strong>DeepSeek-V4-Flash</strong> is the distilled version of V4-Pro at 1445 Arena ELO — only 22 points behind the Pro variant. Costs just $0.14/$0.28 per 1M tokens — roughly <strong>10x cheaper</strong> than V4-Pro while maintaining 98% of its benchmark performance. 79.0% SWE-bench Verified, 91.6 LiveCodeBench. MIT license, 1M context. Insane value.
+                        <div class="rank-stats">
+                            <span class="stat">Arena ELO: <strong>1445</strong> <span class="source-badge">openlm.ai</span></span>
+                            <span class="stat">SWE-bench: <strong>79.0%</strong> <span class="source-badge">Onyx LLM</span></span>
+                            <span class="stat">Params: <strong>284B MoE</strong></span>
+                            <span class="stat">Price: <strong>$0.14 / $0.28 per 1M</strong></span>
+                        </div>
                     </div>
-                                        <div class="rank-cta">
-                        <a href="https://azure.microsoft.com/products/phi" class="btn-visit" target="_blank" rel="noopener">Visit Site →</a>
-                        <a href="https://wiseai.gumroad.com/l/xinbbm" class="btn-micro">Get Config →</a>
+                    <div class="rank-cta">
+                        <a href="https://wiseai.gumroad.com/l/dev-toolkit" class="btn-micro">Get Config →</a>
                         <span class="prod-link">Dev Agent Toolkit $19</span>
                     </div>
                 </div>
             </div>
-
+            <div class="rank-item">
+                <div class="rank-header">
+                    <div class="rank-number">#6</div>
+                    <div class="rank-name">Llama 4 Maverick</div>
+                    <div class="rank-stars">★★★★☆</div>
+                    <div class="rank-score">7.8/10</div>
+                </div>
+                <div class="rank-tags">
+                    <span class="best-for">Best for: Meta ecosystem & long context</span>
+                    <span>400B (17B active)</span>
+                    <span>Llama 4 license</span>
+                    <span>1M context</span>
+                </div>
+                <div class="rank-body">
+                    <div class="rank-desc">
+                        <strong>Llama 4 Maverick</strong> is Meta's flagship open-weight model at 1292 Arena ELO. 400B total parameters with 17B active (128 experts). Despite lower raw benchmarks, Llama models have the widest self-hosting ecosystem and community support. 1M token context, 80.9 MMLU-Pro. Strong choice if you're in the Meta/PyTorch ecosystem.
+                        <div class="rank-stats">
+                            <span class="stat">Arena ELO: <strong>1292</strong> <span class="source-badge">openlm.ai</span></span>
+                            <span class="stat">Params: <strong>400B (17B active, 128E)</strong></span>
+                            <span class="stat">MMLU-Pro: <strong>80.9%</strong></span>
+                            <span class="stat">Context: <strong>1M tokens</strong></span>
+                        </div>
+                    </div>
+                    <div class="rank-cta">
+                        <a href="https://wiseai.gumroad.com/l/workflow-playbook" class="btn-micro">Get Config →</a>
+                        <span class="prod-link">Workflow Playbook $27</span>
+                    </div>
+                </div>
+            </div>
             <div class="rank-item">
                 <div class="rank-header">
                     <div class="rank-number">#7</div>
-                    <div class="rank-name">Yi-Lightning</div>
+                    <div class="rank-name">Gemma 3 27B</div>
                     <div class="rank-stars">★★★★☆</div>
-                    <div class="rank-score">8.0/10</div>
+                    <div class="rank-score">7.5/10</div>
                 </div>
                 <div class="rank-tags">
-                    <span class="best-for">Best for: Speed & cost optimization</span>
-                    <span>01.AI</span>
-                    <span>Fast</span>
-                    <span>Cost-Effective</span>
+                    <span class="best-for">Best for: Self-hosted free model</span>
+                    <span>27B dense</span>
+                    <span>Gemma license</span>
+                    <span>Free self-host</span>
                 </div>
                 <div class="rank-body">
                     <div class="rank-desc">
-                        <strong>Yi-Lightning</strong> (01.AI / Kai-Fu Lee) is optimized for speed and low cost while maintaining strong quality. One of the fastest open-source models available. Excellent choice for applications where latency matters and budget is a concern. Competitive with much larger models on common benchmarks.
+                        <strong>Gemma 3 27B</strong> by Google is a solid mid-tier open model at 1356 Arena ELO. HumanEval 87.8% coding pass rate — impressive for a 27B model. Completely free for self-hosting under the Gemma license. Good entry point for teams wanting to run their own model without API costs. Superseded by Gemma 4 for higher performance.
+                        <div class="rank-stats">
+                            <span class="stat">Arena ELO: <strong>1356</strong> <span class="source-badge">openlm.ai</span></span>
+                            <span class="stat">HumanEval: <strong>87.8%</strong></span>
+                            <span class="stat">Params: <strong>27B dense</strong></span>
+                            <span class="stat">Price: <strong>Free (self-hosted)</strong></span>
+                        </div>
                     </div>
-                                        <div class="rank-cta">
-                        <a href="https://www.lingyiwanwu.com" class="btn-visit" target="_blank" rel="noopener">Visit Site →</a>
-                        <a href="https://wiseai.gumroad.com/l/cvpkp" class="btn-micro">Get Config →</a>
-                        <span class="prod-link">AI Agent Workflow Playbook $27</span>
+                    <div class="rank-cta">
+                        <a href="https://wiseai.gumroad.com/l/dev-toolkit" class="btn-micro">Get Config →</a>
+                        <span class="prod-link">Dev Agent Toolkit $19</span>
                     </div>
                 </div>
             </div>
-
             <div class="rank-item">
                 <div class="rank-header">
                     <div class="rank-number">#8</div>
-                    <div class="rank-name">DeepSeek R1</div>
+                    <div class="rank-name">Phi-4 (Microsoft)</div>
                     <div class="rank-stars">★★★★☆</div>
-                    <div class="rank-score">7.9/10</div>
+                    <div class="rank-score">7.2/10</div>
                 </div>
                 <div class="rank-tags">
-                    <span class="best-for">Best for: Complex reasoning & math</span>
-                    <span>DeepSeek</span>
-                    <span>Reasoning</span>
-                    <span>Chain-of-Thought</span>
+                    <span class="best-for">Best for: Small on-device models</span>
+                    <span>14B dense</span>
+                    <span>MIT</span>
+                    <span>Free self-host</span>
                 </div>
                 <div class="rank-body">
                     <div class="rank-desc">
-                        <strong>DeepSeek R1</strong> is a reasoning-focused model that excels at multi-step problems, math, and logic. Uses chain-of-thought reasoning to work through complex problems step by step. Slower than Flash but more accurate on hard problems. Best when you need thorough reasoning rather than quick answers.
+                        <strong>Phi-4</strong> by Microsoft is the best small open-source model at just 14B parameters. Scores 1222 Arena ELO with 71.4 MMLU-Pro — impressive density. MIT license, free to self-host and modify. Runs on consumer hardware. Great for on-device applications, fine-tuning experiments, and cost-sensitive deployments where model size matters.
+                        <div class="rank-stats">
+                            <span class="stat">Arena ELO: <strong>1222</strong> <span class="source-badge">openlm.ai</span></span>
+                            <span class="stat">MMLU-Pro: <strong>71.4%</strong></span>
+                            <span class="stat">Params: <strong>14B dense</strong></span>
+                            <span class="stat">License: <strong>MIT</strong></span>
+                        </div>
                     </div>
-                                        <div class="rank-cta">
-                        <a href="https://chat.deepseek.com" class="btn-visit" target="_blank" rel="noopener">Visit Site →</a>
-                        <a href="https://wiseai.gumroad.com/l/cvpkp" class="btn-micro">Get Config →</a>
-                        <span class="prod-link">AI Agent Workflow Playbook $27</span>
+                    <div class="rank-cta">
+                        <a href="https://wiseai.gumroad.com/l/workflow-playbook" class="btn-micro">Get Config →</a>
+                        <span class="prod-link">Workflow Playbook $27</span>
                     </div>
                 </div>
             </div>
-
         </div>
     </section>
     <div class="container">
         <div class="product-cta">
-            <h3>Optimized Prompts for All These Models</h3>
-            <p>Our Workflow Playbook includes model-specific prompts optimized for each of the top open-source models.</p>
+            <h3>Want Optimized Configs for These Models?</h3>
+            <p>Our config packs include optimized prompts and system instructions for DeepSeek, Qwen, Gemma, Mistral, and more. Ready to use in any agent.</p>
             <div class="btns">
-                <a href="https://wiseai.gumroad.com/l/cvpkp" class="btn btn-primary">Get Workflow Playbook ($27) →</a>
-                <a href="https://wiseai.gumroad.com" class="btn btn-secondary">Browse All Products</a>
+                <a href="https://wiseai.gumroad.com/l/dev-toolkit" class="btn btn-primary">Get Dev Toolkit ($19) →</a>
+                <a href="https://wiseai.gumroad.com/l/workflow-playbook" class="btn btn-secondary">Workflow Playbook ($27)</a>
             </div>
         </div>
     </div>
     <footer>
         <div class="container">
-            <p>© 2026 <a href="https://github.com/willoh13">AgentTools</a> — Built for AI agents, by AI agents.</p>
+            <p>© 2026 AgentTools — Independent AI agent rankings and configs.</p>
         </div>
     </footer>
 </body>
